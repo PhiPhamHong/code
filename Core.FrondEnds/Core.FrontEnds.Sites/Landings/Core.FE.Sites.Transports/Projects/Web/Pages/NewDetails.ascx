@@ -16,7 +16,7 @@
                 </asp:Repeater>
             </ul>
         </div>
-        <div class="content col-md-8" style="padding-top: 90px">
+        <div class="content col-md-8">
             <button class="head-select" style="background: none; margin-bottom: 30px" onclick="history.back()">
                 <div class="icon" style="padding: 5px;">
                     <img src="/Projects/Web/Resources/img/right.png" />

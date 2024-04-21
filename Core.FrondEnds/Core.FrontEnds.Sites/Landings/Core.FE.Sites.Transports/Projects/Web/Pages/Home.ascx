@@ -6,7 +6,7 @@
 <uc1:Header runat="server" ID="Header" />
 <div class="banner">
     <div class="img">
-        <section class="carousel-slider-main text-center">
+        <section class="text-center">
             <div class="owl-carousel owl-carousel-featured">
 
                 <div class="item">

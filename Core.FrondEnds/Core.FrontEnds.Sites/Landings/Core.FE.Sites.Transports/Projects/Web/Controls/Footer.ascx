@@ -1,8 +1,8 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Footer.ascx.cs" Inherits="Core.FE.Sites.Transports.Projects.Web.Controls.Footer" %>
-<footer style="background: #603813BF; height: 90px">
+<footer>
     <div class="" style="text-align: center;">
-        <div class="col-md-2" style="padding: 25px;">
-            <div style="float:right">
+        <div class="col-md-2 col-sm-12" style="padding: 25px;">
+            <div>
                 <a href="#" target="_blank" style="color: white; padding: 5px">
                     <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor">
                         <path d="M6.5 10v4h3v7h4v-7h3l1-4h-4V8c0-.545.455-1 1-1h3V3h-3c-2.723 0-5 2.277-5 5v2z" />

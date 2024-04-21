@@ -16,7 +16,7 @@
                 </asp:Repeater>
             </ul>
         </div>
-        <div class="content col-md-8" style="display: ruby;">
+        <div class="content col-md-8">
             <div class="head">
 
                 <div class="search">

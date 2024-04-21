@@ -13585,7 +13585,7 @@ body {
 }
 
 header {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -13755,11 +13755,17 @@ header .wrapper.hide-menu {
 
     .banner .img img {
         width: 100%;
+        min-height:calc(100vh - 90px);
+        object-fit:cover;
     }
 
 footer {
     display: flex;
-    background: #Fff;
+    background: #603813BF;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
     footer .left-f {
@@ -13850,8 +13856,7 @@ footer {
 
         .main .content .head {
             display: flex;
-            justify-content: space-between;
-            float: right;
+            justify-content: flex-end;
         }
 
             .main .content .head .search {
@@ -13859,7 +13864,7 @@ footer {
                 padding: 5px;
                 /* padding-left: 60px; */
                 position: relative;
-                width: 226px;
+                width: 300px;
                 background: #F9F9F9;
                 border-radius: 5px;
                 border: 1px solid #E6E6E6;
@@ -13874,6 +13879,7 @@ footer {
                     background: #ed9633;
                     outline: none;
                     border-radius: 5px;
+                    right:0;
                 }
 
                 .main .content .head .search input {
@@ -13884,6 +13890,7 @@ footer {
                     font-size: 14px;
                     background: #F9F9F9;
                     padding: 8px;
+                    padding-right:100px;
                 }
 
                     .main .content .head .search input::placeholder {
@@ -14160,7 +14167,9 @@ list-new ul {
         width: 100% !important;
         height: 100% !important;
     }
-
+#menuToggle input[type=checkbox] {
+    display: none;
+}
 @media (max-width: 1400px) {
     header .wrapper .left .menu-md .item-mn, header .wrapper .right .menu-md .item-mn {
         margin-right: 50px
@@ -14503,10 +14512,6 @@ list-new ul {
         margin-top: 75px;
     }
 
-        .main .content .head {
-            display: block;
-            float:left;
-        }
 
             .main .content .head .search {
                 width: 100%;
@@ -14751,6 +14756,9 @@ list-new ul {
         display: block;
         padding: 6px 0;
     }
+    #menuToggle input[type=checkbox]{
+        display:block;
+    }
 }
 @media(max-width:500px) {
     .col-xs-4 {
@@ -14773,4 +14781,11 @@ list-new ul {
     .main .content{
         padding-top:40px;
     }
+    footer {
+        position: relative;
+    }
+        footer .icon {
+            margin: 0 auto;
+            max-width: 50%;
+        }
 }

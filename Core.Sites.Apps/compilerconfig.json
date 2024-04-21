@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "Web/Resources/scss/auth-login.css",
+    "inputFile": "Web/Resources/scss/auth-login.scss"
+  },
+  {
+    "outputFile": "Web/Resources/Scripts/auth-login.es5.js",
+    "inputFile": "Web/Resources/Scripts/auth-login.js"
+  }
+]

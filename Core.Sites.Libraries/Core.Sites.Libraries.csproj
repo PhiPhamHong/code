@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AE81032B-3BF7-4351-9250-49C19193D7DD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Core.Sites.Libraries</RootNamespace>
+    <AssemblyName>Core.Sites.Libraries</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Cells">
+      <HintPath>..\Core\Refferences\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="CKFinder">
+      <HintPath>..\Core.Sites.Apps\Web\Resources\ckfinder\bin\CKFinder.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Core\Refferences\SignalR\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Core\Refferences\WebApi\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Core\Refferences\WebApi\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Core\Refferences\WebApi\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Api\ApiBase.cs" />
+    <Compile Include="Api\Drivers\Driver.cs" />
+    <Compile Include="Api\Drivers\Driver.Timekeeper.cs" />
+    <Compile Include="Api\Drivers\Entities\Data.cs" />
+    <Compile Include="Api\Drivers\Entities\DeviceOnline.cs" />
+    <Compile Include="Api\Drivers\Entities\Power.cs" />
+    <Compile Include="Api\Drivers\Entities\Remove.cs" />
+    <Compile Include="Api\Servers\Entities\Notification.cs" />
+    <Compile Include="Api\Servers\Entities\ResetConfig.cs" />
+    <Compile Include="Api\Servers\Server.cs" />
+    <Compile Include="Api\Servers\Server.Handler.cs" />
+    <Compile Include="AppSetting.cs" />
+    <Compile Include="AppSetting.ReportExcel.cs">
+      <DependentUpon>AppSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attributes\NeedValidateCompanyAttribute.cs" />
+    <Compile Include="Business\AccessControlProvider.cs" />
+    <Compile Include="Business\AccountSession.cs">
+      <DependentUpon>IMemberSession.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business\CompanyHelper.cs" />
+    <Compile Include="Business\DashBoardItem.cs">
+      <DependentUpon>MainDashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business\GroupMenu.cs">
+      <DependentUpon>MenuDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business\IMemberSession.cs" />
+    <Compile Include="Business\ISiteSession.cs" />
+    <Compile Include="Business\LabelHepler.cs" />
+    <Compile Include="Business\LogEntityHelper.cs" />
+    <Compile Include="Business\MainDashBoard.cs" />
+    <Compile Include="Business\MenuDocument.cs" />
+    <Compile Include="Business\MenuItem.cs">
+      <DependentUpon>MenuItemBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business\MenuItemBase.cs">
+      <DependentUpon>GroupMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business\MenuTop.cs">
+      <DependentUpon>MenuItemBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business\ModuleAttribute.cs" />
+    <Compile Include="Business\PartnerSession.cs" />
+    <Compile Include="Business\PathItem.cs">
+      <DependentUpon>MenuDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business\PortalContext.cs" />
+    <Compile Include="Business\PortalContext.CurrentUser.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>PortalContext.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business\SiteAccountSession.cs">
+      <DependentUpon>ISiteSession.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business\SitePartnerSession.cs" />
+    <Compile Include="Business\UserHelper.cs" />
+    <Compile Include="Business\WebCenter.cs" />
+    <Compile Include="Business\WebCenter.Start.cs">
+      <DependentUpon>WebCenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business\WebCenter.Worker.cs">
+      <DependentUpon>WebCenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business\WebCenter.Worker.One.cs">
+      <DependentUpon>WebCenter.Worker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business\WebCenter.Worker.One.Send.Email.cs">
+      <DependentUpon>WebCenter.Worker.One.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cache\CacheConfig.cs" />
+    <Compile Include="Cache\CacheGlobalConfig.cs" />
+    <Compile Include="Cache\CachePartners.cs" />
+    <Compile Include="Const.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UrlHelper.cs" />
+    <Compile Include="Utilities\AjaxRequireHasPermissionAttribute.cs" />
+    <Compile Include="Utilities\ApiGlobal.cs" />
+    <Compile Include="Utilities\CacheUrl.cs" />
+    <Compile Include="Utilities\FileDownloadAttribute.cs" />
+    <Compile Include="Utilities\FileResult.cs" />
+    <Compile Include="Utilities\DefaultGlobal.cs" />
+    <Compile Include="Utilities\IHubHelper.cs" />
+    <Compile Include="Utilities\MimeType.cs" />
+    <Compile Include="Utilities\OptionItem.cs" />
+    <Compile Include="Utilities\PagePrint.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Utilities\Sites\DashBoard.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Utilities\Sites\DashBoardConfig.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Utilities\Sites\FormEditValidateState.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Utilities\Sites\IDashBoard.cs" />
+    <Compile Include="Utilities\Sites\ManageModule.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Utilities\Sites\PortalModule.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Utilities\Sites\ProviderLanguage.cs" />
+    <Compile Include="Utilities\Sites\Reports\ExcelBinderBase.cs" />
+    <Compile Include="Utilities\Sites\Reports\ExcelBinderType.cs" />
+    <Compile Include="Utilities\Sites\Reports\Extensions\CellExtension.cs" />
+    <Compile Include="Utilities\Sites\Reports\GridBinderProviders\ColumnConfig.cs" />
+    <Compile Include="Utilities\Sites\Reports\GridBinderProviders\ColumnDateConfig.cs">
+      <DependentUpon>ColumnConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\Sites\Reports\GridBinderProviders\ColumnHtmlConfig.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>ColumnConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\Sites\Reports\GridBinderProviders\ColumnMoneyConfig.cs">
+      <DependentUpon>ColumnConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\Sites\Reports\GridBinderProviders\ColumnTimeConfig.cs">
+      <DependentUpon>ColumnConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\Sites\Reports\GridBinderProviders\ColumnTrueFalseConfig.cs">
+      <DependentUpon>ColumnConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\Sites\Reports\GridBinderProviders\FindColumnConfigChain.cs" />
+    <Compile Include="Utilities\Sites\Reports\GridBinderProviders\FindColumnDateConfigChain.cs">
+      <DependentUpon>FindColumnConfigChain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\Sites\Reports\GridBinderProviders\FindColumnHtmlConfigChain.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>FindColumnConfigChain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\Sites\Reports\GridBinderProviders\FindColumnMoneyConfigChain.cs">
+      <DependentUpon>FindColumnConfigChain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\Sites\Reports\GridBinderProviders\FindColumnTimeConfigChain.cs">
+      <DependentUpon>FindColumnConfigChain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\Sites\Reports\GridBinderProviders\FindColumnTrueFalseConfigChain.cs">
+      <DependentUpon>FindColumnConfigChain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\Sites\Reports\GridBinderProviders\GridBinder.cs" />
+    <Compile Include="Utilities\Sites\Reports\GridBinderProviders\GridBinder.Designer.cs">
+      <DependentUpon>GridBinder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\Sites\Reports\IFormTarget.cs" />
+    <Compile Include="Utilities\Sites\Reports\ReportCenter.cs" />
+    <Compile Include="Utilities\Sites\Reports\ReportColumnInfoAttribute.cs" />
+    <Compile Include="Utilities\Sites\Reports\ReportInfoAttribute.cs" />
+    <Compile Include="Utilities\Sites\RewriteAspx.cs" />
+    <Compile Include="Utilities\Sites\ScriptAttribute.cs" />
+    <Compile Include="Utilities\Sites\Table.cs" />
+    <Compile Include="Utilities\CurrencyConverter.cs" />
+    <Compile Include="Utilities\ValidateCompanyAttribute.cs" />
+    <Compile Include="Utilities\ValidateUserAttribute.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core.Business\Core.Business.csproj">
+      <Project>{77ae2787-635c-48ca-ad29-60484850f894}</Project>
+      <Name>Core.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{60ebed1d-8e49-4a7c-8099-e7d1870ac852}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

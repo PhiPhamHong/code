@@ -1,0 +1,82 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Video_Streaming.master.cs" Inherits="Core.FrontEnds.Sites.MainPage.Projects.Blogspots.Video_Streaming.Video_Streaming" %>
+
+<%@ Register Src="~/Projects/Blogspots/Video_Streaming/Controls/Header.ascx" TagPrefix="uc1" TagName="Header" %>
+<%@ Register Src="~/Projects/Blogspots/Video_Streaming/Controls/Footer.ascx" TagPrefix="uc1" TagName="Footer" %>
+<%@ Register Src="~/Projects/Blogspots/Video_Streaming/Modules/Bottom.ascx" TagPrefix="uc1" TagName="Bottom" %>
+<%@ Register Src="~/Projects/Blogspots/Video_Streaming/Modules/Top.ascx" TagPrefix="uc1" TagName="Top" %>
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>TEAM Design - Video streaming template</title>
+    <meta charset="utf-8" />
+
+    <meta charset="utf-8" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://teamdesign.info/trang-chu-video-streaming-template" />
+    <meta property="og:site_name" content="TEAM Design" />
+    <meta property="og:locale" content="vi" />
+
+    <meta property="og:image" content="/Projects/Blogspots/Video_Streaming/Resources/img/ogimage.PNG" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="TEAM Design - Video streaming template like youtube using Bootstrap4, modern, flat style, responsive, business, bootstrap 4, html5, css3, jquery, js, gallery, slider, touch, creative, clean" />
+    <meta name="keywords" content="Software, Bootstrap4, modern, flat style, responsive, business, bootstrap 4, html5, css3, jquery, js, gallery, slider, touch, creative, clean" />
+    <meta name="author" content="Teamdesign" />
+    <!-- Favicon Icon -->
+    <link rel="icon" type="image/png" href="/Projects/Blogspots/Video_Streaming/Resources/img/favicon.png" />
+    <!-- Nhúng css vào đây -->
+
+    <link type="text/css" href="/Projects/Blogspots/Video_Streaming/Resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link type="text/css" href="/Projects/Blogspots/Video_Streaming/Resources/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <link type="text/css" href="/Projects/Blogspots/Video_Streaming/Resources/css/osahan.css" rel="stylesheet" />
+    <link type="text/css" href="/Projects/Blogspots/Video_Streaming/Resources/vendor/owl-carousel/owl.carousel.css" rel="stylesheet" />
+    <link type="text/css" href="/Projects/Blogspots/Video_Streaming/Resources/vendor/owl-carousel/owl.theme.css" rel="stylesheet" />
+
+
+    <asp:Literal runat="server" ID="ltrHead"></asp:Literal>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <div id="fb-root"></div>
+    <div id="preloader"></div>
+    <style>
+        #preloader {
+            background: #ffffff url("/Projects/Landings/Landing_Contruction/Resources/img/preloader.gif") no-repeat scroll calc(50%) 50%;
+            height: 100%;
+            left: 0;
+            overflow: visible;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 999999999999;
+        }
+    </style>
+    <uc1:Top runat="server" ID="Top" />
+
+    <div id="wrapper">
+        <uc1:Header runat="server" />
+        <div id="content-wrapper">
+            <asp:ContentPlaceHolder ID="content" runat="server"></asp:ContentPlaceHolder>
+            <uc1:Footer runat="server" />
+        </div>
+    </div>
+
+    <uc1:Bottom runat="server" ID="Bottom" />
+
+    <asp:Literal runat="server" ID="ltrBottom" Visible="false"></asp:Literal>
+    <div class="hidden" style="display: none" data-query="page"><%= Request.QueryString.ToDic().ToJson() %></div>
+    <div class="hidden" style="display: none" data-language-flag="<%= FeContext.Url.Language.Flag %>" data-language="<%= FeContext.Url.Language.LanguageId %>"></div>
+
+    <!-- Nhúng js vào đây -->
+
+
+    <script type="text/javascript" src="/Projects/Blogspots/Video_Streaming/Resources/vendor/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/Projects/Blogspots/Video_Streaming/Resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="/Projects/Blogspots/Video_Streaming/Resources/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="/Projects/Blogspots/Video_Streaming/Resources/vendor/owl-carousel/owl.carousel.js"></script>
+    <script type="text/javascript" src="/Projects/Blogspots/Video_Streaming/Resources/js/custom.js"></script>
+
+</body>
+</html>
+

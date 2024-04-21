@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Ajax.aspx.cs" Inherits="Core.FrontEnds.Sites.MainPage.Common.Services.Ajax" %>

@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Core.FE.Suns.Projects.Web.Site" %>
+
+<%@ Register Src="~/Projects/Web/Controls/Header.ascx" TagPrefix="uc1" TagName="Header" %>
+<%@ Register Src="~/Projects/Web/Controls/Footer.ascx" TagPrefix="uc1" TagName="Footer" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title> SUNS - Công ty TNHH dịch vụ kỹ thuật SUNS </title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <meta name="description" content="SUN Services Technical luôn phấn đấu, nỗ lực không ngừng nhằm đem lại cho khách hàng những sản phẩm công nghệ tiên tiến và phấn đấu để trở thành thương hiệu đáng tin cậy. Bên cạnh việc cung cấp các sản phẩm UPS, chúng tôi còn cung cấp dịch vụ sửa chữa cho tất cả các thiết bị của nhiều thương hiệu nổi tiếng như APC, Emerson, Santak, Legrand…" />
+    <meta name="keywords" content="Dịch vụ Kỹ thuật, SUNS, Công nghệ thông tin, Phần mềm, ERP, Quản lý, Quản lý doanh nghiệp, Services Technical, APC, Emerson, Santak, Legrand" />
+    <meta name="author" content="APhiBB" />
+    <meta name="robots" content="noodp,index,follow" />
+    <meta name="revisit-after" content="1 days" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://suns" />
+    <meta property="og:site_name" content=" SUNS - Công ty TNHH dịch vụ kỹ thuật SUNS " />
+    <meta property="og:locale" content="vi" />
+    <meta http-equiv="content-language" content="vi,en" />
+    <meta name="geo.region" content="VN-HN" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Oswald:200,300,400,500,600,700" rel="stylesheet" />
+    <meta property="og:image" content="/Projects/Web/Resources/img/about.jpg" />
+    <link rel="icon" type="image/png" href="/Projects/Web/Resources/img/fav.png" />
+
+    <asp:Literal runat="server" ID="ltrHead"></asp:Literal>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <div id="fb-root"></div>
+    <div id="preloader"></div>
+
+    <uc1:Header runat="server" />
+    <asp:ContentPlaceHolder ID="content" runat="server"></asp:ContentPlaceHolder>
+    <uc1:Footer runat="server" />
+
+    <asp:Literal runat="server" ID="ltrBottom" Visible="false"></asp:Literal>
+    <div class="hidden" data-query="page"><%= Request.QueryString.ToDic().ToJson() %></div>
+    <div class="hidden" data-language-flag="<%= FeContext.Url.Language.Flag %>" data-language="<%= FeContext.Url.Language.LanguageId %>"></div>
+</body>
+</html>

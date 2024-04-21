@@ -1,0 +1,605 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{60EBED1D-8E49-4A7C-8099-E7D1870AC852}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Core</RootNamespace>
+    <AssemblyName>Core</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <DontImportPostSharp>True</DontImportPostSharp>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Fizzler">
+      <HintPath>Refferences\Spiders\Fizzler.dll</HintPath>
+    </Reference>
+    <Reference Include="Fizzler.Systems.HtmlAgilityPack">
+      <HintPath>Refferences\Spiders\Fizzler.Systems.HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>Refferences\Spiders\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Refferences\SignalR\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=2.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Refferences\SignalR\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Refferences\SignalR\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Refferences\SignalR\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Refferences\SignalR\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=5.0.414.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Refferences\Microsoft.Practices\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Refferences\SignalR\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Refferences\SignalR\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="ShellControl, Version=1.0.5393.29883, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Refferences\ShellControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Doc, Version=5.2.12.54040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Refferences\Spire\Spire.Doc.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.License, Version=1.3.2.40, Culture=neutral, PublicKeyToken=b1144360237c8b3f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Refferences\Spire\Spire.License.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Pdf, Version=3.1.15.54040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Refferences\Spire\Spire.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Refferences\WebApi\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Refferences\WebApi\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Refferences\WebApi\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ThemeColorPicker, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Refferences\ThemeColorPicker.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\ClassInfoAttribute.cs" />
+    <Compile Include="Attributes\FieldInfoAttribute.cs" />
+    <Compile Include="Attributes\MethodInfoAttribute.cs" />
+    <Compile Include="Attributes\PropertyIndexAttribute.cs" />
+    <Compile Include="Attributes\PropertyInfoAttribute.cs" />
+    <Compile Include="Attributes\Validators\NeedValidateAttribute.cs" />
+    <Compile Include="Attributes\Validators\ValidatorAttribute.cs" />
+    <Compile Include="Attributes\Validators\ValidatorDenyValueAttribute.cs" />
+    <Compile Include="Attributes\Validators\ValidatorEmailAttribute.cs" />
+    <Compile Include="Attributes\Validators\ValidatorGreaterBaseAttribute.cs" />
+    <Compile Include="Attributes\Validators\ValidatorIntAttribute.cs" />
+    <Compile Include="Attributes\Validators\ValidatorIsDateAttribute.cs" />
+    <Compile Include="Attributes\Validators\ValidatorLengthAttribute.cs" />
+    <Compile Include="Attributes\Validators\ValidatorNotAllowEqualAttribute.cs" />
+    <Compile Include="Attributes\Validators\ValidatorNotAllowSpecialCharacterAttribute.cs" />
+    <Compile Include="Attributes\Validators\ValidatorNotMultipleWhiteSpaceAttribute.cs" />
+    <Compile Include="Attributes\Validators\ValidatorPhoneNumberAttribute.cs" />
+    <Compile Include="Attributes\Validators\ValidatorRangeAttribute.cs" />
+    <Compile Include="Attributes\Validators\ValidatorRequireAttribute.cs" />
+    <Compile Include="Attributes\Validators\ValidatorStrongPasswordAttribute.cs" />
+    <Compile Include="Caching\CacheEntry.cs" />
+    <Compile Include="Caching\CacheFactoryAttribute.cs" />
+    <Compile Include="Caching\CacheManager.cs" />
+    <Compile Include="Caching\CacheProvider\PortalContextCacheProvider.cs" />
+    <Compile Include="Caching\CacheProvider\WebCacheProvider.cs" />
+    <Compile Include="Caching\ICacheFactory.cs" />
+    <Compile Include="Caching\ICacheProvider.cs" />
+    <Compile Include="Caching\IClearCache.cs" />
+    <Compile Include="Caching\IServerCacheSwitchable.cs" />
+    <Compile Include="Caching\PortalContextCacheFactory.cs">
+      <DependentUpon>ICacheFactory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Caching\PropertyCacheAttribute.cs" />
+    <Compile Include="Caching\PropertyCacheOptionalAttribute.cs">
+      <DependentUpon>PropertyCacheAttribute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Caching\ServerCache.cs" />
+    <Compile Include="Caching\WebCacheFactory.cs">
+      <DependentUpon>ICacheFactory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\ADOProvider\Attributes\DbServiceTypeAttribute.cs" />
+    <Compile Include="DataBase\ADOProvider\Attributes\FieldAttribute.cs" />
+    <Compile Include="DataBase\ADOProvider\Attributes\FieldLogChangeAttribute.cs" />
+    <Compile Include="DataBase\ADOProvider\Attributes\FieldSearchAttribute.cs" />
+    <Compile Include="DataBase\ADOProvider\Attributes\IEntityForDataLog.cs" />
+    <Compile Include="DataBase\ADOProvider\Attributes\IFieldLogChange.cs" />
+    <Compile Include="DataBase\ADOProvider\Attributes\LanguageAttribute.cs" />
+    <Compile Include="DataBase\ADOProvider\Attributes\LogEntity.cs" />
+    <Compile Include="DataBase\ADOProvider\Attributes\LogEntityDetail.cs" />
+    <Compile Include="DataBase\ADOProvider\Attributes\TableInfoAttribute.cs" />
+    <Compile Include="DataBase\ADOProvider\DataBaseService.cs" />
+    <Compile Include="DataBase\ADOProvider\DbTable.cs" />
+    <Compile Include="DataBase\ADOProvider\MainDBBase.cs" />
+    <Compile Include="DataBase\ADOProvider\MainDBBase.Designer.cs">
+      <DependentUpon>MainDBBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\ADOProvider\ModelBase.cs" />
+    <Compile Include="DataBase\ADOProvider\ModelBase.Designer.cs">
+      <DependentUpon>ModelBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\ADOProvider\ModelListSave.cs" />
+    <Compile Include="DataBase\ADOProvider\Param.cs" />
+    <Compile Include="DataBase\ADOProvider\ShSqlCommand\ShCommand.cs" />
+    <Compile Include="DataBase\ADOProvider\ShSqlCommand\ShDeleteCommand.cs" />
+    <Compile Include="DataBase\ADOProvider\ShSqlCommand\ShGetAllCommand.cs" />
+    <Compile Include="DataBase\ADOProvider\ShSqlCommand\ShGetByKeyCommand.cs" />
+    <Compile Include="DataBase\ADOProvider\ShSqlCommand\ShInsertCommand.cs" />
+    <Compile Include="DataBase\ADOProvider\ShSqlCommand\ShSaveCommand.cs" />
+    <Compile Include="DataBase\ADOProvider\ShSqlCommand\ShUpdateCommand.cs" />
+    <Compile Include="DataBase\ADOProvider\ShSqlCommand\TSqlBuilder.cs" />
+    <Compile Include="DataBase\ADOProvider\ShTransaction.cs" />
+    <Compile Include="Extensions\ArrayExtension.cs" />
+    <Compile Include="Extensions\DataTableExtension.cs" />
+    <Compile Include="Extensions\DateTimeExtension.cs" />
+    <Compile Include="Extensions\DecimalExtension.cs" />
+    <Compile Include="Extensions\DictionaryExtension.cs" />
+    <Compile Include="Extensions\EnumerableExtension.cs" />
+    <Compile Include="Extensions\ExpressionExtension.cs" />
+    <Compile Include="Extensions\Int32Extension.cs" />
+    <Compile Include="Extensions\MemberInfoExtension.cs" />
+    <Compile Include="Extensions\NameValueCollectionExtension.cs" />
+    <Compile Include="Extensions\ObjectExtension.cs" />
+    <Compile Include="Extensions\SingleExtension.cs" />
+    <Compile Include="Extensions\StringExtension.cs" />
+    <Compile Include="Extensions\TypeExtension.cs" />
+    <Compile Include="Extensions\XElementExtension.cs" />
+    <Compile Include="Forms\ControlExtender.cs" />
+    <Compile Include="Forms\Converters\ListConverter.cs" />
+    <Compile Include="Forms\FrmCenter.Contana.cs">
+      <SubType>Form</SubType>
+      <DependentUpon>FrmCenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCenter.ContanaAutoGC.cs">
+      <SubType>Form</SubType>
+      <DependentUpon>FrmCenter.Contana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCenter.ContanaCheckFolderError.cs">
+      <SubType>Form</SubType>
+      <DependentUpon>FrmCenter.Contana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCenter.ContanaCheckRam.cs">
+      <SubType>Form</SubType>
+      <DependentUpon>FrmCenter.Contana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCenter.ContanaMessage.cs">
+      <SubType>Form</SubType>
+      <DependentUpon>FrmCenter.Contana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCenter.ContanaSendEmailWhenError.cs">
+      <SubType>Form</SubType>
+      <DependentUpon>FrmCenter.Contana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCenter.ContanaSendSmsWhenError.cs">
+      <SubType>Form</SubType>
+      <DependentUpon>FrmCenter.Contana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCenter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCenter.designer.cs">
+      <DependentUpon>FrmCenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmConfigContana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmConfigContana.designer.cs">
+      <DependentUpon>FrmConfigContana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmConfigContana.Settings.cs">
+      <SubType>Form</SubType>
+      <DependentUpon>FrmConfigContana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IInput.cs" />
+    <Compile Include="Forms\ShButtonConfirm.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\ShDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\TransparentPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MapUtility\AreaInfor.cs" />
+    <Compile Include="MapUtility\Circle.cs">
+      <DependentUpon>IShape.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapUtility\Coordinate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MapUtility\IShape.cs" />
+    <Compile Include="MapUtility\MapHelper.cs" />
+    <Compile Include="MapUtility\Polygon.cs">
+      <DependentUpon>IShape.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reflectors\AssemblyClassInfoAttribute.cs" />
+    <Compile Include="Reflectors\ReflectAssemblyTypeListPropertyWithAttribute.cs" />
+    <Compile Include="Reflectors\ReflectAttribute.cs" />
+    <Compile Include="Reflectors\ReflectClassInfo.cs" />
+    <Compile Include="Reflectors\ReflectFieldInfo.cs" />
+    <Compile Include="Reflectors\ReflectListAttribute.cs" />
+    <Compile Include="Reflectors\ReflectMethodInfo.cs" />
+    <Compile Include="Reflectors\ReflectTypeListFieldLogChange.cs" />
+    <Compile Include="Reflectors\ReflectTypeListMethodInfo.cs" />
+    <Compile Include="Reflectors\ReflectTypeListProperty.cs" />
+    <Compile Include="Reflectors\ReflectTypeListPropertyPublic.cs" />
+    <Compile Include="Reflectors\ReflectTypeListPropertyWithAttribute.cs" />
+    <Compile Include="Reflectors\ReflectTypeListPropertyWithListAttribute.cs" />
+    <Compile Include="Types\BooleanConverter.cs" />
+    <Compile Include="Types\ByteConverter.cs" />
+    <Compile Include="Types\ConverterOfAttribute.cs" />
+    <Compile Include="Types\DateTimeConverter.cs" />
+    <Compile Include="Types\DecimalConverter.cs" />
+    <Compile Include="Types\DoubleConverter.cs" />
+    <Compile Include="Types\GuidConverter.cs" />
+    <Compile Include="Types\Int16Converter.cs" />
+    <Compile Include="Types\Int32Converter.cs" />
+    <Compile Include="Types\Int64Converter.cs" />
+    <Compile Include="Types\ShTypeCode.cs" />
+    <Compile Include="Types\ShTypeCodeOfAttribute.cs" />
+    <Compile Include="Types\ShTypeConverter.cs" />
+    <Compile Include="Types\SingleConverter.cs" />
+    <Compile Include="Types\SqlTypeDescriptor.cs" />
+    <Compile Include="Types\StringConverter.cs" />
+    <Compile Include="Types\TimeSpanConverter.cs" />
+    <Compile Include="Utility\BinaryLibrary.cs" />
+    <Compile Include="Utility\ChartItem.cs" />
+    <Compile Include="Utility\DataSource.cs" />
+    <Compile Include="Utility\Keygend.cs" />
+    <Compile Include="Utility\Bool.cs" />
+    <Compile Include="Utility\Cryptography.cs" />
+    <Compile Include="Utility\CurrentDns.cs" />
+    <Compile Include="Utility\DayPilot\EventItem.cs" />
+    <Compile Include="Utility\DayPilot\IResource.cs" />
+    <Compile Include="Utility\DictionaryCacheBase.cs" />
+    <Compile Include="Utility\ICompressor.cs" />
+    <Compile Include="Utility\IO\DiskDrive.cs" />
+    <Compile Include="Utility\EnumHelper.cs" />
+    <Compile Include="Utility\IO\FileHelper.cs" />
+    <Compile Include="Utility\IO\FileStreamReader.cs" />
+    <Compile Include="Utility\Json\SDateConverter.cs" />
+    <Compile Include="Utility\Key.cs" />
+    <Compile Include="Utility\Language\IProviderLanguage.cs" />
+    <Compile Include="Utility\Language\LanguageHelper.cs" />
+    <Compile Include="Utility\MemberInfoHelper.cs" />
+    <Compile Include="Utility\Messagable.cs" />
+    <Compile Include="Utility\Model.cs" />
+    <Compile Include="Utility\MsgSerialize\SerializeLibrary.cs" />
+    <Compile Include="Utility\MsgSerialize\TypeBooleanSerializeProvider.cs" />
+    <Compile Include="Utility\MsgSerialize\TypeByteSerializeProvider.cs" />
+    <Compile Include="Utility\MsgSerialize\TypeDateTimeSerializeProvider.cs" />
+    <Compile Include="Utility\MsgSerialize\TypeDoubleSerializeProvider.cs" />
+    <Compile Include="Utility\MsgSerialize\TypeEnumSerializeProvider.cs" />
+    <Compile Include="Utility\MsgSerialize\TypeGuidSerializeProvider.cs" />
+    <Compile Include="Utility\MsgSerialize\TypeInt16SerializeProvider.cs" />
+    <Compile Include="Utility\MsgSerialize\TypeInt32SerializeProvider.cs" />
+    <Compile Include="Utility\MsgSerialize\TypeInt64SerializeProvider.cs" />
+    <Compile Include="Utility\MsgSerialize\TypeListSerializeProvider.cs" />
+    <Compile Include="Utility\MsgSerialize\TypeObjectSerializeProvider.cs" />
+    <Compile Include="Utility\MsgSerialize\TypeSerializeProvider.cs" />
+    <Compile Include="Utility\MsgSerialize\TypeSingleSerializeProvider.cs" />
+    <Compile Include="Utility\MsgSerialize\TypeStringSerializeProvider.cs" />
+    <Compile Include="Utility\Pair.cs" />
+    <Compile Include="Utility\Patterns\Chain.cs" />
+    <Compile Include="Utility\ServiceClient.cs" />
+    <Compile Include="Utility\ShBackgroundWorker.cs" />
+    <Compile Include="Utility\ShMailer.cs" />
+    <Compile Include="Utility\Singleton.cs" />
+    <Compile Include="Utility\Sockets\Command.Connection.CommandInfo.cs">
+      <DependentUpon>Command.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\Sockets\Command.Connection.cs">
+      <DependentUpon>Command.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\Sockets\Command.cs" />
+    <Compile Include="Utility\Sockets\CommandAttribute.cs" />
+    <Compile Include="Utility\Sockets\CommandFrom.cs" />
+    <Compile Include="Utility\Sockets\CommandFromCache.cs" />
+    <Compile Include="Utility\Sockets\CommandInfo.cs" />
+    <Compile Include="Utility\Sockets\Connection.Center.cs">
+      <DependentUpon>Connection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\Sockets\Connection.Command.Center.ConnectionState.cs">
+      <DependentUpon>Connection.Command.Center.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\Sockets\Connection.Command.Center.cs">
+      <DependentUpon>Connection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\Sockets\Connection.cs" />
+    <Compile Include="Utility\Sockets\Connection.Methods.cs">
+      <DependentUpon>Connection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\Sockets\Connection.Properties.cs">
+      <DependentUpon>Connection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\Sockets\Connection.Receive.cs">
+      <DependentUpon>Connection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\Sockets\Connection.Send.cs">
+      <DependentUpon>Connection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\Sockets\Connection.Virtual.cs">
+      <DependentUpon>Connection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\Sockets\ConnectionAcceptLisener.cs" />
+    <Compile Include="Utility\Sockets\ConnectionAcceptPort.cs" />
+    <Compile Include="Utility\Sockets\ConnectionState.cs" />
+    <Compile Include="Utility\Sockets\Crypts\ICrypter.cs" />
+    <Compile Include="Utility\Sockets\Crypts\NoneCrypt.cs" />
+    <Compile Include="Utility\Sockets\ICommandInfo.cs">
+      <DependentUpon>CommandInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\Sockets\ICommandInfoStep.cs">
+      <DependentUpon>CommandInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\Sockets\ICommandPing.cs">
+      <DependentUpon>CommandInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\Sockets\IConnectionWithManager.cs" />
+    <Compile Include="Utility\Sockets\IManageConnection.cs" />
+    <Compile Include="Utility\Sockets\ManageConnection.cs" />
+    <Compile Include="Utility\Sockets\ManageConnectionExtension.cs" />
+    <Compile Include="Utility\Sockets\Protocol.cs" />
+    <Compile Include="Utility\Sockets\TConnectionKey.cs" />
+    <Compile Include="Utility\Spiders\HttpClient.cs" />
+    <Compile Include="Utility\Spiders\Spider.cs" />
+    <Compile Include="Utility\Spiders\VirtualWebBrowser.cs" />
+    <Compile Include="Utility\Spiders\WebRequest.cs" />
+    <Compile Include="Utility\Summary.cs" />
+    <Compile Include="Utility\Trees\ITreeItem.cs" />
+    <Compile Include="Utility\Trees\Tree.cs" />
+    <Compile Include="Utility\Trees\TreeParentAttribute.cs" />
+    <Compile Include="Utility\WcfManager\Host.cs" />
+    <Compile Include="Utility\WcfManager\HostUserNamePasswordValidator.cs" />
+    <Compile Include="Utility\WcfManager\ServiceBase.cs" />
+    <Compile Include="Utility\WcfManager\ServiceInfoAttribute.cs" />
+    <Compile Include="Utility\WcfManager\ServiceManager.cs" />
+    <Compile Include="Utility\ShWord.cs" />
+    <Compile Include="Utility\Xml\ConfigBase.cs" />
+    <Compile Include="Utility\Xml\ReadConfig.cs" />
+    <Compile Include="WaitingAttribute.cs" />
+    <Compile Include="Web\Api\CoreApiController.cs" />
+    <Compile Include="Web\Api\CoreApiListEntitiesController.cs" />
+    <Compile Include="Web\Api\WebApiConfig.cs" />
+    <Compile Include="Web\Extensions\ControlExtension.cs" />
+    <Compile Include="Web\Extensions\HttpRequestExtension.cs" />
+    <Compile Include="Web\Extensions\ShRepeater.cs" />
+    <Compile Include="Web\Extensions\RepeaterExtension.cs" />
+    <Compile Include="Web\IGlobal.cs" />
+    <Compile Include="Web\IUrlPath.cs" />
+    <Compile Include="Web\Resources\HandlerResourceBase.cs" />
+    <Compile Include="Web\Resources\ILinkResource.cs" />
+    <Compile Include="Web\Resources\LinkTag.cs" />
+    <Compile Include="Web\Resources\ResourceCssHandler.cs" />
+    <Compile Include="Web\Resources\ResourceHandler.cs" />
+    <Compile Include="Web\Resources\ResourceJsHandler.cs" />
+    <Compile Include="Web\Resources\ResourcesConfig.cs" />
+    <Compile Include="Web\Resources\ScriptTag.cs" />
+    <Compile Include="Web\SendGrid\Helpers\Mail\MailHelper.cs" />
+    <Compile Include="Web\SendGrid\Helpers\Mail\Model\ASM.cs" />
+    <Compile Include="Web\SendGrid\Helpers\Mail\Model\Attachment.cs" />
+    <Compile Include="Web\SendGrid\Helpers\Mail\Model\BCCSettings.cs" />
+    <Compile Include="Web\SendGrid\Helpers\Mail\Model\BypassListManagement.cs" />
+    <Compile Include="Web\SendGrid\Helpers\Mail\Model\ClickTracking.cs" />
+    <Compile Include="Web\SendGrid\Helpers\Mail\Model\Content.cs" />
+    <Compile Include="Web\SendGrid\Helpers\Mail\Model\EmailAddress.cs" />
+    <Compile Include="Web\SendGrid\Helpers\Mail\Model\FooterSettings.cs" />
+    <Compile Include="Web\SendGrid\Helpers\Mail\Model\Ganalytics.cs" />
+    <Compile Include="Web\SendGrid\Helpers\Mail\Model\HtmlContent.cs" />
+    <Compile Include="Web\SendGrid\Helpers\Mail\Model\MailSettings.cs" />
+    <Compile Include="Web\SendGrid\Helpers\Mail\Model\OpenTracking.cs" />
+    <Compile Include="Web\SendGrid\Helpers\Mail\Model\Personalization.cs" />
+    <Compile Include="Web\SendGrid\Helpers\Mail\Model\PlainTextContent.cs" />
+    <Compile Include="Web\SendGrid\Helpers\Mail\Model\SandboxMode.cs" />
+    <Compile Include="Web\SendGrid\Helpers\Mail\Model\SpamCheck.cs" />
+    <Compile Include="Web\SendGrid\Helpers\Mail\Model\SubscriptionTracking.cs" />
+    <Compile Include="Web\SendGrid\Helpers\Mail\Model\TrackingSettings.cs" />
+    <Compile Include="Web\SendGrid\Helpers\Mail\SendGridMessage.cs" />
+    <Compile Include="Web\SendGrid\ISendGridClient.cs" />
+    <Compile Include="Web\SendGrid\MimeType.cs" />
+    <Compile Include="Web\SendGrid\Reliability\ReliabilitySettings.cs" />
+    <Compile Include="Web\SendGrid\Reliability\RetryDelegatingHandler.cs" />
+    <Compile Include="Web\SendGrid\Response.cs" />
+    <Compile Include="Web\SendGrid\SendGridClient.cs" />
+    <Compile Include="Web\SendGrid\SendGridClientOptions.cs" />
+    <Compile Include="Web\Utility\Soap.cs" />
+    <Compile Include="Web\Utility\ValidateState.cs" />
+    <Compile Include="Web\Utility\ValidateState.ForReceiver.cs">
+      <DependentUpon>ValidateState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Utility\ValidateState.ForReceiver.Done.cs">
+      <DependentUpon>ValidateState.ForReceiver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Utility\ValidateState.ForReceiver.Received.cs">
+      <DependentUpon>ValidateState.ForReceiver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Utility\ValidateState.ForReceiver.Rejected.cs">
+      <DependentUpon>ValidateState.ForReceiver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Utility\ValidateState.ForSender.cs">
+      <DependentUpon>ValidateState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Utility\ValidateState.ForSender.Sending.cs">
+      <DependentUpon>ValidateState.ForSender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Utility\ValidateState.ForSender.Temp.cs">
+      <DependentUpon>ValidateState.ForSender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Utility\WebRequest.cs" />
+    <Compile Include="Web\WebBase\AccountSession.cs" />
+    <Compile Include="Web\WebBase\AjaxBoundRequestAttribute.cs" />
+    <Compile Include="Web\WebBase\AjaxRequestConditionAttribute.cs" />
+    <Compile Include="Web\WebBase\Context.cs" />
+    <Compile Include="Web\WebBase\ControlBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\WebBase\HtmlBuilders\Checkbox.cs" />
+    <Compile Include="Web\WebBase\HtmlBuilders\ColorPicker.cs" />
+    <Compile Include="Web\WebBase\HtmlBuilders\DatePicker.cs" />
+    <Compile Include="Web\WebBase\HtmlBuilders\DocInput.cs" />
+    <Compile Include="Web\WebBase\HtmlBuilders\FileInput.cs" />
+    <Compile Include="Web\WebBase\HtmlBuilders\FormGroup.cs" />
+    <Compile Include="Web\WebBase\HtmlBuilders\GroupCheckbox.cs" />
+    <Compile Include="Web\WebBase\HtmlBuilders\Html.cs" />
+    <Compile Include="Web\WebBase\HtmlBuilders\Input.cs" />
+    <Compile Include="Web\WebBase\HtmlBuilders\InputBase.cs" />
+    <Compile Include="Web\WebBase\HtmlBuilders\LatLngInput.cs" />
+    <Compile Include="Web\WebBase\HtmlBuilders\ModelNone.cs" />
+    <Compile Include="Web\WebBase\HtmlBuilders\MoneyInput.cs" />
+    <Compile Include="Web\WebBase\HtmlBuilders\PriceInput.cs" />
+    <Compile Include="Web\WebBase\HtmlBuilders\Radio.cs" />
+    <Compile Include="Web\WebBase\HtmlBuilders\Select.cs" />
+    <Compile Include="Web\WebBase\HtmlBuilders\SelectEnum.cs" />
+    <Compile Include="Web\WebBase\HtmlBuilders\SelectModel.cs" />
+    <Compile Include="Web\WebBase\HtmlBuilders\Table.cs" />
+    <Compile Include="Web\WebBase\HtmlBuilders\TimePicker.cs" />
+    <Compile Include="Web\WebBase\IAccount.cs" />
+    <Compile Include="Web\WebBase\IAjax.cs" />
+    <Compile Include="Web\WebBase\IManageModulePermission.cs" />
+    <Compile Include="Web\WebBase\IPortalModule.cs" />
+    <Compile Include="Web\WebBase\IUserLogin.cs" />
+    <Compile Include="Web\WebBase\ObjectCookie.cs" />
+    <Compile Include="Web\WebBase\PageAjax.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\WebBase\PageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\WebBase\ResponseMessage.cs" />
+    <Compile Include="Web\WebBase\RewriteBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Refferences\AspAlliance.CacheManager.dll" />
+    <Content Include="Refferences\Aspose.Cells.dll" />
+    <Content Include="Refferences\Microsoft.Practices\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="Refferences\Microsoft.Practices\Microsoft.Practices.EnterpriseLibrary.Data.dll" />
+    <Content Include="Refferences\ShellControl.dll" />
+    <Content Include="Refferences\SignalR\Microsoft.AspNet.SignalR.Core.dll" />
+    <Content Include="Refferences\SignalR\Microsoft.AspNet.SignalR.Core.xml" />
+    <Content Include="Refferences\SignalR\Microsoft.AspNet.SignalR.SystemWeb.dll" />
+    <Content Include="Refferences\SignalR\Microsoft.AspNet.SignalR.SystemWeb.xml" />
+    <Content Include="Refferences\SignalR\Microsoft.Owin.Cors.dll" />
+    <Content Include="Refferences\SignalR\Microsoft.Owin.Cors.xml" />
+    <Content Include="Refferences\SignalR\Microsoft.Owin.Diagnostics.dll" />
+    <Content Include="Refferences\SignalR\Microsoft.Owin.Diagnostics.xml" />
+    <Content Include="Refferences\SignalR\Microsoft.Owin.dll" />
+    <Content Include="Refferences\SignalR\Microsoft.Owin.Host.HttpListener.dll" />
+    <Content Include="Refferences\SignalR\Microsoft.Owin.Host.HttpListener.xml" />
+    <Content Include="Refferences\SignalR\Microsoft.Owin.Host.SystemWeb.dll" />
+    <Content Include="Refferences\SignalR\Microsoft.Owin.Host.SystemWeb.xml" />
+    <Content Include="Refferences\SignalR\Microsoft.Owin.Hosting.dll" />
+    <Content Include="Refferences\SignalR\Microsoft.Owin.Hosting.xml" />
+    <Content Include="Refferences\SignalR\Microsoft.Owin.Security.dll" />
+    <Content Include="Refferences\SignalR\Microsoft.Owin.Security.xml" />
+    <Content Include="Refferences\SignalR\Microsoft.Owin.xml" />
+    <Content Include="Refferences\SignalR\Newtonsoft.Json.dll" />
+    <Content Include="Refferences\SignalR\Newtonsoft.Json.xml" />
+    <Content Include="Refferences\SignalR\Owin.dll" />
+    <Content Include="Refferences\SignalR\System.Web.Cors.dll" />
+    <Content Include="Refferences\Spiders\Fizzler.dll" />
+    <Content Include="Refferences\Spiders\Fizzler.Systems.HtmlAgilityPack.dll" />
+    <Content Include="Refferences\Spiders\HtmlAgilityPack.dll" />
+    <Content Include="Refferences\Spire\Spire.Doc.dll" />
+    <Content Include="Refferences\Spire\Spire.Doc.xml" />
+    <Content Include="Refferences\Spire\Spire.License.dll" />
+    <Content Include="Refferences\Spire\Spire.License.xml" />
+    <Content Include="Refferences\Spire\Spire.Pdf.dll" />
+    <Content Include="Refferences\ThemeColorPicker.dll" />
+    <Content Include="Refferences\WebApi\System.Net.Http.Formatting.dll" />
+    <Content Include="Refferences\WebApi\System.Web.Http.dll" />
+    <Content Include="Refferences\WebApi\System.Web.Http.WebHost.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\FrmCenter.resx">
+      <DependentUpon>FrmCenter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmConfigContana.resx">
+      <DependentUpon>FrmConfigContana.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Web\SendGrid\Helpers\Mail\README.md" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\PostSharp.3.0.35\tools\PostSharp.targets" Condition="Exists('..\packages\PostSharp.3.0.35\tools\PostSharp.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

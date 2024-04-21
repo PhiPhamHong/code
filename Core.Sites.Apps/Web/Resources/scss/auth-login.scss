@@ -1,0 +1,303 @@
+﻿$color-white: #ffffff;
+$color-black: #232323;
+$color-link: #0083af;
+$color-blue: #007acc;
+$color-info: #00a1e1;
+$color-yellow: #fafa00;
+$color-accent: #00c5dc;
+$color-accent-dark: #17a2b8;
+$bg-gradient-blue-light: linear-gradient(to right, #59e1cb, #32b8e6);
+$bg-gradient-danger: linear-gradient(to right, #D31027, #EA384D);
+
+html, 
+body{
+    height:100%;
+}
+a,
+a .fa,
+a .glyphicon,
+a:hover,
+a:hover .fa,
+a:hover .glyphicon,
+a:active,
+a:focus {
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.login-page {
+    font-family: 'Roboto Condensed', sans-serif;
+
+    .login-section {
+        .login-box {
+            padding: 2rem;
+
+            .login-box-body {
+                padding: 15px;
+
+                .input-group {
+                    .input-group-prepend {
+                        .input-group-text {
+                            .fa {
+                                width: 18px;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+
+                .input-group,
+                .form-group {
+                    .form-control,
+                    .custom-select {
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.info-box {
+    /*height: 100%;
+    background: url('/Web/Resources/Images/whoarewe-globalization.jpg') no-repeat center center;
+    background-size: cover;*/
+
+    .client-testimonials {
+        padding: 30px;
+        margin-top: 80px;
+
+        .owl-carousel {
+            background: #f8f8f8;
+            border-radius: 4px;
+
+            .testimonial-item {
+                .testimonial-meta {
+                    list-style: none;
+                    margin-bottom: 0;
+                    padding: 0;
+
+                    .testimonial-author {
+                        p {
+                            margin: 0;
+                            padding-top: 5px;
+                            font-size: 13px;
+                            line-height: 16px;
+                        }
+                    }
+
+                    .testimonial-info {
+                        font-weight: 300;
+                        text-align: justify;
+                        font-size: 14px;
+
+                        blockquote {
+                            margin-bottom: 5px;
+                        }
+
+                        .testimonial-votes {
+                            color: #F7AC00;
+
+                            .fa {
+                                padding-right: 4px;
+
+                                &:last-child {
+                                    padding-right: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .owl-dots {
+                margin: 0;
+            }
+        }
+    }
+
+    .strategic-partners {
+        padding: 0 30px;
+
+        ul.owl-carousel {
+            list-style: none;
+            margin-bottom: 0;
+            padding: 0;
+            position: relative;
+
+            li {
+                a {
+                    display: inline-block;
+
+                    img {
+                        padding: 4px;
+                        border: 1px solid $color-white;
+                    }
+                }
+            }
+
+            .owl-nav {
+                margin: 0;
+
+                .owl-prev,
+                .owl-next {
+                    position: absolute;
+                    top: 10px;
+                    color: $color-white;
+                    font-size: 28px;
+
+                    &:hover {
+                        background: transparent;
+                    }
+                }
+
+                .owl-prev {
+                    left: -30px;
+                }
+
+                .owl-next {
+                    right: -30px;
+                }
+            }
+        }
+    }
+}
+.btn-radius {
+    border-radius: 20px;
+}
+.btn-login {
+    background: $bg-gradient-danger;
+    color: $color-white;
+    font-weight: 300;
+
+    > .fa {
+        width: 18px;
+        text-align: center;
+    }
+}
+/*--- Social ---*/
+.social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+        margin-left: 10px;
+        display: inline-block;
+
+        a.s-icon {
+            display: inline-block;
+            position: relative;
+            width: 28px;
+            height: 28px;
+            line-height: 28px;
+            text-align: center;
+            background-color: transparent;
+            color: $color-white;
+            /*border: 1px solid $color-white;*/
+            /*border-radius: 50%;*/
+            i {
+                color: $color-white;
+            }
+        }
+
+        a {
+            color: $color-white;
+
+            > span.fa {
+                width: 28px;
+                height: 28px;
+                line-height: 28px;
+                text-align: center;
+                margin-right: 5px;
+                background: rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        a:not(.s-icon):hover {
+            color: $color-yellow;
+        }
+
+        a.s-icon.facebook {
+            background-color: $color-blue;
+        }
+
+        a.s-icon.skype,
+        a.s-icon.twitter {
+            background-color: $color-info;
+        }
+
+        a.s-icon.instagram {
+            background: #f09433;
+            background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+            background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+        }
+
+        a.s-icon.youtube,
+        a.s-icon.pinterest {
+            background-color: #cb2027;
+        }
+
+        a.s-icon.google,
+        a.s-icon.google-plus {
+            background-color: #d24b3a;
+        }
+
+        a.s-icon.email {
+            background-color: $color-accent-dark;
+        }
+
+        a.s-icon.phone {
+            background-color: $color-link;
+        }
+
+        a.s-icon:hover {
+            border-color: $color-white;
+            transform: rotateZ(45deg);
+
+            i {
+                transform: rotateZ(-45deg);
+            }
+        }
+
+        &:first-child {
+            margin-left: 0px;
+        }
+    }
+}
+
+/*-- RESPONSIVE --*/
+@mixin r-InfoBox {
+    .info-box {
+        .client-testimonials {
+            margin-top: 30px;
+        }
+    }
+}
+/* sm */
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+/* xs */
+@media (max-width: 767px) {
+}
+
+@media (max-width: 575.98px) {
+    @include r-InfoBox;
+}
+/* XS Portrait */
+@media (max-width: 480px) {
+    @include r-InfoBox;
+}

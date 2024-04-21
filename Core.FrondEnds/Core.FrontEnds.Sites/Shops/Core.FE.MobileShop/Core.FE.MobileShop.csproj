@@ -1,0 +1,598 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5E13D422-912A-4536-AD90-92969CAF621F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Core.FE.MobileShop</RootNamespace>
+    <AssemblyName>Core.FE.MobileShop</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44392</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Common\Modules\ModuleLoader.ascx" />
+    <Content Include="Common\Resources\js\1.jquery.min.js" />
+    <Content Include="Common\Resources\js\Core.js" />
+    <Content Include="Common\Resources\js\CoreAjax.js" />
+    <Content Include="Common\Resources\js\jquery.pathchange.js" />
+    <Content Include="Common\Resources\js\linq.js" />
+    <Content Include="Common\Resources\js\Popup.js" />
+    <Content Include="Common\Resources\plugins\jQueryUI\jquery-ui-1.10.3.js" />
+    <Content Include="Common\Resources\plugins\jQueryUI\jquery-ui-1.10.3.min.js" />
+    <Content Include="Common\Resources\plugins\jQueryUI\jquery-ui.css" />
+    <Content Include="Common\Resources\plugins\jQueryUI\jquery-ui.min.js" />
+    <Content Include="Common\Resources\plugins\lightgallery\css\lg-fb-comment-box.css" />
+    <Content Include="Common\Resources\plugins\lightgallery\css\lg-fb-comment-box.min.css" />
+    <Content Include="Common\Resources\plugins\lightgallery\css\lg-transitions.css" />
+    <Content Include="Common\Resources\plugins\lightgallery\css\lg-transitions.min.css" />
+    <Content Include="Common\Resources\plugins\lightgallery\css\lightgallery.css" />
+    <Content Include="Common\Resources\plugins\lightgallery\css\lightgallery.min.css" />
+    <Content Include="Common\Resources\plugins\lightgallery\fonts\lg.svg" />
+    <Content Include="Common\Resources\plugins\lightgallery\img\loading.gif" />
+    <Content Include="Common\Resources\plugins\lightgallery\img\video-play.png" />
+    <Content Include="Common\Resources\plugins\lightgallery\img\vimeo-play.png" />
+    <Content Include="Common\Resources\plugins\lightgallery\img\youtube-play.png" />
+    <Content Include="Common\Resources\plugins\lightgallery\js\lightgallery-all.js" />
+    <Content Include="Common\Resources\plugins\lightgallery\js\lightgallery-all.min.js" />
+    <Content Include="Common\Resources\plugins\lightgallery\js\lightgallery.js" />
+    <Content Include="Common\Resources\plugins\lightgallery\js\lightgallery.min.js" />
+    <Content Include="Common\Resources\plugins\lightgallery\js\picturefill.min.js" />
+    <Content Include="Common\Resources\plugins\mousewheel\jquery.mousewheel.min.js" />
+    <Content Include="Common\Resources\plugins\pnotify\pnotify.custom.min.css" />
+    <Content Include="Common\Resources\plugins\pnotify\pnotify.custom.min.js" />
+    <Content Include="Common\Resources\plugins\Sticky\jquery.sticky.js" />
+    <Content Include="Common\Services\Ajax.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Projects\Web\Controls\Footer.ascx" />
+    <Content Include="Projects\Web\Controls\Header.ascx" />
+    <Content Include="Projects\Web\Main.aspx" />
+    <Content Include="Projects\Web\Modules\Cart\CartHeader.ascx" />
+    <Content Include="Projects\Web\Modules\ProfileLink.ascx" />
+    <Content Include="Projects\Web\Modules\Top_Brands.ascx" />
+    <Content Include="Projects\Web\Pages\Shop_Mobile_About.ascx" />
+    <Content Include="Projects\Web\Pages\Shop_Mobile_Address.ascx" />
+    <Content Include="Projects\Web\Pages\Shop_Mobile_Blog_left.ascx" />
+    <Content Include="Projects\Web\Pages\Shop_Mobile_Blog_single.ascx" />
+    <Content Include="Projects\Web\Pages\Shop_Mobile_Cartcheckout.ascx" />
+    <Content Include="Projects\Web\Pages\Shop_Mobile_Cart_delivery.ascx" />
+    <Content Include="Projects\Web\Pages\Shop_Mobile_Cart_done.ascx" />
+    <Content Include="Projects\Web\Pages\Shop_Mobile_Cart_order.ascx" />
+    <Content Include="Projects\Web\Pages\Shop_Mobile_Category.ascx" />
+    <Content Include="Projects\Web\Pages\Shop_Mobile_Compare.ascx" />
+    <Content Include="Projects\Web\Pages\Shop_Mobile_Contact.ascx" />
+    <Content Include="Projects\Web\Pages\Shop_Mobile_Faq.ascx" />
+    <Content Include="Projects\Web\Pages\Shop_Mobile_Grid_left_sidebar.ascx" />
+    <Content Include="Projects\Web\Pages\Shop_Mobile_Home.ascx" />
+    <Content Include="Projects\Web\Pages\Shop_Mobile_Login.ascx" />
+    <Content Include="Projects\Web\Pages\Shop_Mobile_Orderlist.ascx" />
+    <Content Include="Projects\Web\Pages\Shop_Mobile_Orderstatus.ascx" />
+    <Content Include="Projects\Web\Pages\Shop_Mobile_Profile.ascx" />
+    <Content Include="Projects\Web\Pages\Shop_Mobile_Quickview.ascx" />
+    <Content Include="Projects\Web\Pages\Shop_Mobile_Register.ascx" />
+    <Content Include="Projects\Web\Pages\Shop_Mobile_Shopping_cart.ascx" />
+    <Content Include="Projects\Web\Pages\Shop_Mobile_Shop_details.ascx" />
+    <Content Include="Projects\Web\Pages\Shop_Mobile_Terms_conditions.ascx" />
+    <Content Include="Projects\Web\Pages\Shop_Mobile_Viewcart.ascx" />
+    <Content Include="Projects\Web\Pages\Shop_Mobile_Wishlist_user.ascx" />
+    <Content Include="Projects\Web\Resources\css\animate.css" />
+    <Content Include="Projects\Web\Resources\css\bootstrap.min.css" />
+    <Content Include="Projects\Web\Resources\css\icofont.css" />
+    <Content Include="Projects\Web\Resources\css\mobile.css" />
+    <Content Include="Projects\Web\Resources\css\owl.carousel.css" />
+    <Content Include="Projects\Web\Resources\css\owl.theme.css" />
+    <Content Include="Projects\Web\Resources\css\select2.min.css" />
+    <Content Include="Projects\Web\Resources\css\style.css" />
+    <Content Include="Projects\Web\Resources\fonts-awesome\css\font-awesome.min.css" />
+    <Content Include="Projects\Web\Resources\fonts-awesome\fonts\fontawesome-webfont.woff2-v=4.3.0.htm" />
+    <Content Include="Projects\Web\Resources\fonts\css\all.min.css" />
+    <Content Include="Projects\Web\Resources\fonts\icofont.svg" />
+    <Content Include="Projects\Web\Resources\fonts\webfonts\fa-brands-400.svg" />
+    <Content Include="Projects\Web\Resources\fonts\webfonts\fa-regular-400.svg" />
+    <Content Include="Projects\Web\Resources\fonts\webfonts\fa-solid-900.svg" />
+    <Content Include="Projects\Web\Resources\images\b1.jpg" />
+    <Content Include="Projects\Web\Resources\images\b2.jpg" />
+    <Content Include="Projects\Web\Resources\images\b3.jpg" />
+    <Content Include="Projects\Web\Resources\images\all-products-list\small\1.jpg" />
+    <Content Include="Projects\Web\Resources\images\all-products-list\small\2.jpg" />
+    <Content Include="Projects\Web\Resources\images\all-products-list\small\3.jpg" />
+    <Content Include="Projects\Web\Resources\images\all-products-list\small\4.jpg" />
+    <Content Include="Projects\Web\Resources\images\all-products-list\small\5.jpg" />
+    <Content Include="Projects\Web\Resources\images\all-products\large\1.jpg" />
+    <Content Include="Projects\Web\Resources\images\all-products\large\2.jpg" />
+    <Content Include="Projects\Web\Resources\images\all-products\large\3.jpg" />
+    <Content Include="Projects\Web\Resources\images\all-products\large\4.jpg" />
+    <Content Include="Projects\Web\Resources\images\all-products\large\5.jpg" />
+    <Content Include="Projects\Web\Resources\images\all-products\large\6.jpg" />
+    <Content Include="Projects\Web\Resources\images\all-products\small\1.jpg" />
+    <Content Include="Projects\Web\Resources\images\all-products\small\2.jpg" />
+    <Content Include="Projects\Web\Resources\images\all-products\small\3.jpg" />
+    <Content Include="Projects\Web\Resources\images\all-products\small\4.jpg" />
+    <Content Include="Projects\Web\Resources\images\all-products\small\5.jpg" />
+    <Content Include="Projects\Web\Resources\images\all-products\small\6.jpg" />
+    <Content Include="Projects\Web\Resources\images\app-store.png" />
+    <Content Include="Projects\Web\Resources\images\apple-icon.png" />
+    <Content Include="Projects\Web\Resources\images\banner.jpg" />
+    <Content Include="Projects\Web\Resources\images\blog\blog-01.jpg" />
+    <Content Include="Projects\Web\Resources\images\blog\blog-02.jpg" />
+    <Content Include="Projects\Web\Resources\images\blog\blog-03.jpg" />
+    <Content Include="Projects\Web\Resources\images\blog\user\a1.jpg" />
+    <Content Include="Projects\Web\Resources\images\blog\user\a2.jpg" />
+    <Content Include="Projects\Web\Resources\images\blog\user\a3.jpg" />
+    <Content Include="Projects\Web\Resources\images\blog\user\a4.jpg" />
+    <Content Include="Projects\Web\Resources\images\blog\user\a5.jpg" />
+    <Content Include="Projects\Web\Resources\images\blog\user\a6.jpg" />
+    <Content Include="Projects\Web\Resources\images\blog\user\a7.jpg" />
+    <Content Include="Projects\Web\Resources\images\blog\user\a8.jpg" />
+    <Content Include="Projects\Web\Resources\images\brands\1.png" />
+    <Content Include="Projects\Web\Resources\images\brands\10.png" />
+    <Content Include="Projects\Web\Resources\images\brands\11.png" />
+    <Content Include="Projects\Web\Resources\images\brands\12.png" />
+    <Content Include="Projects\Web\Resources\images\brands\2.png" />
+    <Content Include="Projects\Web\Resources\images\brands\3.png" />
+    <Content Include="Projects\Web\Resources\images\brands\4.png" />
+    <Content Include="Projects\Web\Resources\images\brands\5.png" />
+    <Content Include="Projects\Web\Resources\images\brands\6.png" />
+    <Content Include="Projects\Web\Resources\images\brands\7.png" />
+    <Content Include="Projects\Web\Resources\images\brands\8.png" />
+    <Content Include="Projects\Web\Resources\images\brands\9.png" />
+    <Content Include="Projects\Web\Resources\images\favicon.png" />
+    <Content Include="Projects\Web\Resources\images\google-play.png" />
+    <Content Include="Projects\Web\Resources\images\homepage3\kids.png" />
+    <Content Include="Projects\Web\Resources\images\homepage3\men.png" />
+    <Content Include="Projects\Web\Resources\images\homepage3\women.png" />
+    <Content Include="Projects\Web\Resources\images\index1.jpg" />
+    <Content Include="Projects\Web\Resources\images\index2.jpg" />
+    <Content Include="Projects\Web\Resources\images\index3.jpg" />
+    <Content Include="Projects\Web\Resources\images\index4.jpg" />
+    <Content Include="Projects\Web\Resources\images\login_register_bg.jpg" />
+    <Content Include="Projects\Web\Resources\images\logo-white.png" />
+    <Content Include="Projects\Web\Resources\images\logo.png" />
+    <Content Include="Projects\Web\Resources\images\menu2-top.png" />
+    <Content Include="Projects\Web\Resources\images\offers-list\1.jpg" />
+    <Content Include="Projects\Web\Resources\images\offers-list\2.jpg" />
+    <Content Include="Projects\Web\Resources\images\offers-list\3.jpg" />
+    <Content Include="Projects\Web\Resources\images\offers-list\4.jpg" />
+    <Content Include="Projects\Web\Resources\images\offers-list\5.jpg" />
+    <Content Include="Projects\Web\Resources\images\offers-list\6.jpg" />
+    <Content Include="Projects\Web\Resources\images\offers-list\7.jpg" />
+    <Content Include="Projects\Web\Resources\images\offers-list\8.jpg" />
+    <Content Include="Projects\Web\Resources\images\offers-list\9.jpg" />
+    <Content Include="Projects\Web\Resources\images\offers\home1_bn1.png" />
+    <Content Include="Projects\Web\Resources\images\offers\home2_banner_2.jpg" />
+    <Content Include="Projects\Web\Resources\images\offers\home2_banner_3.jpg" />
+    <Content Include="Projects\Web\Resources\images\offers\kids-top.png" />
+    <Content Include="Projects\Web\Resources\images\offers\menu2-top.png" />
+    <Content Include="Projects\Web\Resources\images\payment_methods.png" />
+    <Content Include="Projects\Web\Resources\images\slider\slider1.jpg" />
+    <Content Include="Projects\Web\Resources\images\slider\slider2.jpg" />
+    <Content Include="Projects\Web\Resources\images\slider\slider3.jpg" />
+    <Content Include="Projects\Web\Resources\images\user-ava.jpg" />
+    <Content Include="Projects\Web\Resources\images\user-cover-img.jpg" />
+    <Content Include="Projects\Web\Resources\images\users\1.jpg" />
+    <Content Include="Projects\Web\Resources\images\users\2.jpg" />
+    <Content Include="Projects\Web\Resources\images\users\3.jpg" />
+    <Content Include="Projects\Web\Resources\js\bootstrap.min.js" />
+    <Content Include="Projects\Web\Resources\js\custom.js" />
+    <Content Include="Projects\Web\Resources\js\jquery.min.js" />
+    <Content Include="Projects\Web\Resources\js\Main.js" />
+    <Content Include="Projects\Web\Resources\js\owl.carousel.js" />
+    <Content Include="Projects\Web\Resources\js\popper.min.js" />
+    <Content Include="Projects\Web\Resources\js\select2.min.js" />
+    <Content Include="Projects\Web\Resources\js\tether.min.js" />
+    <Content Include="Services\Empty.aspx" />
+    <Content Include="Services\FeError.aspx" />
+    <Content Include="Services\FeError404.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\Modules\ModuleLoader.ascx.cs">
+      <DependentUpon>ModuleLoader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Modules\ModuleLoader.ascx.designer.cs">
+      <DependentUpon>ModuleLoader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Services\Ajax.aspx.cs">
+      <DependentUpon>Ajax.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Services\Ajax.aspx.designer.cs">
+      <DependentUpon>Ajax.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Controls\Footer.ascx.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Controls\Footer.ascx.designer.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Controls\Header.ascx.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Controls\Header.ascx.designer.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Modules\Cart\CartHeader.ascx.cs">
+      <DependentUpon>CartHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Modules\Cart\CartHeader.ascx.designer.cs">
+      <DependentUpon>CartHeader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Modules\ProfileLink.ascx.cs">
+      <DependentUpon>ProfileLink.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Modules\ProfileLink.ascx.designer.cs">
+      <DependentUpon>ProfileLink.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Modules\Top_Brands.ascx.cs">
+      <DependentUpon>Top_Brands.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Modules\Top_Brands.ascx.designer.cs">
+      <DependentUpon>Top_Brands.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_About.ascx.cs">
+      <DependentUpon>Shop_Mobile_About.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_About.ascx.designer.cs">
+      <DependentUpon>Shop_Mobile_About.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Address.ascx.cs">
+      <DependentUpon>Shop_Mobile_Address.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Address.ascx.designer.cs">
+      <DependentUpon>Shop_Mobile_Address.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Blog_left.ascx.cs">
+      <DependentUpon>Shop_Mobile_Blog_left.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Blog_left.ascx.designer.cs">
+      <DependentUpon>Shop_Mobile_Blog_left.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Blog_single.ascx.cs">
+      <DependentUpon>Shop_Mobile_Blog_single.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Blog_single.ascx.designer.cs">
+      <DependentUpon>Shop_Mobile_Blog_single.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Cartcheckout.ascx.cs">
+      <DependentUpon>Shop_Mobile_Cartcheckout.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Cartcheckout.ascx.designer.cs">
+      <DependentUpon>Shop_Mobile_Cartcheckout.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Cart_delivery.ascx.cs">
+      <DependentUpon>Shop_Mobile_Cart_delivery.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Cart_delivery.ascx.designer.cs">
+      <DependentUpon>Shop_Mobile_Cart_delivery.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Cart_done.ascx.cs">
+      <DependentUpon>Shop_Mobile_Cart_done.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Cart_done.ascx.designer.cs">
+      <DependentUpon>Shop_Mobile_Cart_done.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Cart_order.ascx.cs">
+      <DependentUpon>Shop_Mobile_Cart_order.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Cart_order.ascx.designer.cs">
+      <DependentUpon>Shop_Mobile_Cart_order.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Category.ascx.cs">
+      <DependentUpon>Shop_Mobile_Category.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Category.ascx.designer.cs">
+      <DependentUpon>Shop_Mobile_Category.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Compare.ascx.cs">
+      <DependentUpon>Shop_Mobile_Compare.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Compare.ascx.designer.cs">
+      <DependentUpon>Shop_Mobile_Compare.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Contact.ascx.cs">
+      <DependentUpon>Shop_Mobile_Contact.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Contact.ascx.designer.cs">
+      <DependentUpon>Shop_Mobile_Contact.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Faq.ascx.cs">
+      <DependentUpon>Shop_Mobile_Faq.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Faq.ascx.designer.cs">
+      <DependentUpon>Shop_Mobile_Faq.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Grid_left_sidebar.ascx.cs">
+      <DependentUpon>Shop_Mobile_Grid_left_sidebar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Grid_left_sidebar.ascx.designer.cs">
+      <DependentUpon>Shop_Mobile_Grid_left_sidebar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Home.ascx.cs">
+      <DependentUpon>Shop_Mobile_Home.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Home.ascx.designer.cs">
+      <DependentUpon>Shop_Mobile_Home.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Login.ascx.cs">
+      <DependentUpon>Shop_Mobile_Login.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Login.ascx.designer.cs">
+      <DependentUpon>Shop_Mobile_Login.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Orderlist.ascx.cs">
+      <DependentUpon>Shop_Mobile_Orderlist.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Orderlist.ascx.designer.cs">
+      <DependentUpon>Shop_Mobile_Orderlist.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Orderstatus.ascx.cs">
+      <DependentUpon>Shop_Mobile_Orderstatus.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Orderstatus.ascx.designer.cs">
+      <DependentUpon>Shop_Mobile_Orderstatus.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Profile.ascx.cs">
+      <DependentUpon>Shop_Mobile_Profile.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Profile.ascx.designer.cs">
+      <DependentUpon>Shop_Mobile_Profile.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Quickview.ascx.cs">
+      <DependentUpon>Shop_Mobile_Quickview.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Quickview.ascx.designer.cs">
+      <DependentUpon>Shop_Mobile_Quickview.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Register.ascx.cs">
+      <DependentUpon>Shop_Mobile_Register.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Register.ascx.designer.cs">
+      <DependentUpon>Shop_Mobile_Register.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Shopping_cart.ascx.cs">
+      <DependentUpon>Shop_Mobile_Shopping_cart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Shopping_cart.ascx.designer.cs">
+      <DependentUpon>Shop_Mobile_Shopping_cart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Shop_details.ascx.cs">
+      <DependentUpon>Shop_Mobile_Shop_details.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Shop_details.ascx.designer.cs">
+      <DependentUpon>Shop_Mobile_Shop_details.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Terms_conditions.ascx.cs">
+      <DependentUpon>Shop_Mobile_Terms_conditions.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Terms_conditions.ascx.designer.cs">
+      <DependentUpon>Shop_Mobile_Terms_conditions.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Viewcart.ascx.cs">
+      <DependentUpon>Shop_Mobile_Viewcart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Viewcart.ascx.designer.cs">
+      <DependentUpon>Shop_Mobile_Viewcart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Wishlist_user.ascx.cs">
+      <DependentUpon>Shop_Mobile_Wishlist_user.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Shop_Mobile_Wishlist_user.ascx.designer.cs">
+      <DependentUpon>Shop_Mobile_Wishlist_user.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Tools\ShCart.cs" />
+    <Compile Include="Projects\Web\Tools\UserLogin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Empty.aspx.cs">
+      <DependentUpon>Empty.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services\Empty.aspx.designer.cs">
+      <DependentUpon>Empty.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\FeError.aspx.cs">
+      <DependentUpon>FeError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services\FeError.aspx.designer.cs">
+      <DependentUpon>FeError.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\FeError404.aspx.cs">
+      <DependentUpon>FeError404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services\FeError404.aspx.designer.cs">
+      <DependentUpon>FeError404.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Common\Resources\plugins\lightgallery\fonts\lg.eot" />
+    <Content Include="Common\Resources\plugins\lightgallery\fonts\lg.ttf" />
+    <Content Include="Common\Resources\plugins\lightgallery\fonts\lg.woff" />
+    <Content Include="Projects\Web\Site.Master" />
+    <Content Include="Projects\Web\Settings\Pages.config" />
+    <Content Include="Projects\Web\Settings\Resources.config" />
+    <Content Include="Projects\Web\Settings\Settings.config" />
+    <Content Include="Projects\Web\Resources\fonts-awesome\fonts\fontawesome-webfont.eot#iefix-v=4.3.0" />
+    <Content Include="Projects\Web\Resources\fonts-awesome\fonts\fontawesome-webfont.svg-v=4.3.0.htm-" />
+    <Content Include="Projects\Web\Resources\fonts-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Projects\Web\Resources\fonts-awesome\fonts\fontawesome-webfont.woff2-v=4.3.0" />
+    <Content Include="Projects\Web\Resources\fonts\icofont-v=1.0.0-beta.eot" />
+    <Content Include="Projects\Web\Resources\fonts\icofont-v=1.0.0-beta.ttf" />
+    <Content Include="Projects\Web\Resources\fonts\icofont-v=1.0.0-beta.woff" />
+    <Content Include="Projects\Web\Resources\fonts\icofont.ttf" />
+    <Content Include="Projects\Web\Resources\fonts\webfonts\fa-brands-400.eot" />
+    <Content Include="Projects\Web\Resources\fonts\webfonts\fa-brands-400.ttf" />
+    <Content Include="Projects\Web\Resources\fonts\webfonts\fa-brands-400.woff" />
+    <Content Include="Projects\Web\Resources\fonts\webfonts\fa-brands-400.woff2" />
+    <Content Include="Projects\Web\Resources\fonts\webfonts\fa-regular-400.eot" />
+    <Content Include="Projects\Web\Resources\fonts\webfonts\fa-regular-400.ttf" />
+    <Content Include="Projects\Web\Resources\fonts\webfonts\fa-regular-400.woff" />
+    <Content Include="Projects\Web\Resources\fonts\webfonts\fa-regular-400.woff2" />
+    <Content Include="Projects\Web\Resources\fonts\webfonts\fa-solid-900.eot" />
+    <Content Include="Projects\Web\Resources\fonts\webfonts\fa-solid-900.ttf" />
+    <Content Include="Projects\Web\Resources\fonts\webfonts\fa-solid-900.woff" />
+    <Content Include="Projects\Web\Resources\fonts\webfonts\fa-solid-900.woff2" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Core.Business\Core.Business.csproj">
+      <Project>{77ae2787-635c-48ca-ad29-60484850f894}</Project>
+      <Name>Core.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Core\Core.csproj">
+      <Project>{60ebed1d-8e49-4a7c-8099-e7d1870ac852}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core.FrontEnds.Libraries\Core.FrontEnds.Libraries.csproj">
+      <Project>{6f72d3e8-8283-4126-b7e0-617b5f89d271}</Project>
+      <Name>Core.FrontEnds.Libraries</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64855</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44392/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

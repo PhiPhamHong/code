@@ -1,0 +1,119 @@
+﻿@mixin r-navbar-custom-menu($position-type: absolute,$property: top, $value: 0, $screen-type: small) {
+    .navbar-custom-menu {
+        position: $position-type;
+        #{$property}: $value;
+
+        .navbar-nav {
+            > li {
+                > a {
+                    height: 48px;
+                    line-height: 48px;
+                    text-align: center;
+
+                    @if $screen-type == medium {
+                        width: auto;
+                        padding: 0 10px !important;
+                    }
+                    @else {
+                        width: 40px;
+                        padding: 0 !important;
+                    }
+
+                    > .user-image {
+                        float: none;
+                        margin-top: 0;
+                    }
+                }
+
+                > .dropdown-menu {
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+@mixin r-navbar-collapse {
+    .navbar-collapse.pull-left {
+        width: 100%;
+
+        .navbar-nav {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+}
+@mixin r-logo {
+    .logo {
+        float: left;
+        width: 50px;
+        height: 48px;
+        line-height: 48px;
+        z-index: 9999;
+        padding: 0;
+
+        .logo-mini {
+            display: inline-block;
+
+            > b {
+                letter-spacing: 1px;
+            }
+        }
+
+        .logo-lg {
+            display: none;
+        }
+    }
+}
+@mixin r-navbar-toggle {
+    .navbar-toggle {
+        border-radius: 0;
+
+        &:hover {
+            background: rgba(0,0,0,0.1);
+        }
+    }
+}
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+    .skin-blue .main-header .navbar .dropdown-menu li a{color: #232323;}
+    .main-header {
+        @include r-logo();
+
+        .navbar {
+            @include r-navbar-collapse();
+            @include r-navbar-custom-menu();
+            @include r-navbar-toggle();
+        }
+    }
+}
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .skin-blue .main-header .navbar .dropdown-menu li a {
+        color: #232323;
+    }
+    .main-header {
+        @include r-logo();
+
+        .navbar {
+            @include r-navbar-collapse();
+            @include r-navbar-custom-menu();
+            @include r-navbar-toggle();
+        }
+    }
+}
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .main-header {
+        .navbar {
+            @include r-navbar-custom-menu(static, margin-top, 4px, medium);
+        }
+    }
+}
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    
+}
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}

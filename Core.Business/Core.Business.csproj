@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{77AE2787-635C-48CA-AD29-60484850F894}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Core.Business</RootNamespace>
+    <AssemblyName>Core.Business</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\Core\Refferences\Microsoft.Practices\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Core\Refferences\SignalR\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Caches\CacheLabelItem.cs" />
+    <Compile Include="Entities\Company.cs" />
+    <Compile Include="Entities\Company.designer.cs">
+      <DependentUpon>Company.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\CompanyConfig.cs">
+      <DependentUpon>Company.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\CompanyPackageService.cs">
+      <DependentUpon>Company.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\CompanyPackageService.designer.cs">
+      <DependentUpon>CompanyPackageService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\CRM\Campaign.cs" />
+    <Compile Include="Entities\CRM\Email.cs" />
+    <Compile Include="Entities\CRM\Facebook.cs" />
+    <Compile Include="Entities\CRM\Feedback.cs" />
+    <Compile Include="Entities\CRM\LandingPage.cs">
+      <DependentUpon>Campaign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\CRM\Opportunity.cs">
+      <DependentUpon>Campaign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\CRM\Partner.Contact.cs">
+      <DependentUpon>Partner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\CRM\Partner.cs" />
+    <Compile Include="Entities\CRM\Partner.Group.cs">
+      <DependentUpon>Partner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\CRM\Partner.Source.cs">
+      <DependentUpon>Partner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\CRM\Partner.Type.cs">
+      <DependentUpon>Partner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\CRM\Partner.User.cs">
+      <DependentUpon>Partner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\CRM\Customer.cs" />
+    <Compile Include="Entities\CRM\Reports\CallHistory.cs" />
+    <Compile Include="Entities\CRM\SendLog.cs" />
+    <Compile Include="Entities\CRM\SMS.cs" />
+    <Compile Include="Entities\CRM\SMSConfig.cs">
+      <DependentUpon>SMS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\CRM\TeleSale.Result.cs">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\CRM\Template.cs">
+      <DependentUpon>Campaign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\CRM\Transaction.cs" />
+    <Compile Include="Entities\CRM\Transaction.File.cs">
+      <DependentUpon>Transaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\CRM\Transaction.History.cs">
+      <DependentUpon>Transaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\CRM\Transaction.Prioritize.cs">
+      <DependentUpon>Transaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\CRM\Transaction.Status.cs">
+      <DependentUpon>Transaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\CRM\Transaction.Type.cs">
+      <DependentUpon>Transaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\CRM\UptinForm.cs">
+      <DependentUpon>Campaign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ERP\Account.cs" />
+    <Compile Include="Entities\ERP\Bank.cs" />
+    <Compile Include="Entities\ERP\BankAccount.cs" />
+    <Compile Include="Entities\ERP\ChangeStock.cs" />
+    <Compile Include="Entities\ERP\Enum.cs" />
+    <Compile Include="Entities\ERP\Currency.cs" />
+    <Compile Include="Entities\ERP\Department.cs" />
+    <Compile Include="Entities\ERP\Employee.cs" />
+    <Compile Include="Entities\ERP\Diary.cs" />
+    <Compile Include="Entities\ERP\Order.cs">
+      <DependentUpon>Diary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ERP\Payment.cs">
+      <DependentUpon>Diary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ERP\Product.cs" />
+    <Compile Include="Entities\ERP\Receipt.cs">
+      <DependentUpon>Diary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ERP\Reports\DeptMustPay.cs" />
+    <Compile Include="Entities\ERP\Reports\DeptMustReceiptByCustomer.cs" />
+    <Compile Include="Entities\ERP\Reports\Ledger.cs" />
+    <Compile Include="Entities\ERP\Reports\SumRevenueBySale.cs" />
+    <Compile Include="Entities\ERP\Salary.cs" />
+    <Compile Include="Entities\ERP\Stock.cs" />
+    <Compile Include="Entities\ERP\Work.cs" />
+    <Compile Include="Entities\GlobalConfig.cs" />
+    <Compile Include="Entities\GroupUser.cs" />
+    <Compile Include="Entities\GroupUser.Leader.cs">
+      <DependentUpon>GroupUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\GroupUser.User.cs">
+      <DependentUpon>GroupUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ICompanyNeedValidate.cs" />
+    <Compile Include="Entities\Label.cs" />
+    <Compile Include="Entities\Label.designer.cs">
+      <DependentUpon>Label.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Language.cs" />
+    <Compile Include="Entities\Language.ManageForModule.cs">
+      <DependentUpon>Language.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Others\Area.cs" />
+    <Compile Include="Entities\Others\Documents\Document.cs" />
+    <Compile Include="Entities\Others\Nationality.cs" />
+    <Compile Include="Entities\Others\PriceConfigs\Direction.cs" />
+    <Compile Include="Entities\Others\PriceConfigs\PriceConfig.cs" />
+    <Compile Include="Entities\Others\PriceConfigs\ProductType.cs" />
+    <Compile Include="Entities\Others\TransportCost.cs" />
+    <Compile Include="Entities\User.PrintConfig.cs" />
+    <Compile Include="Entities\Websites\Banner.cs" />
+    <Compile Include="Entities\Websites\Banner.Target.cs">
+      <DependentUpon>Banner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Log\FieldConverter.cs" />
+    <Compile Include="Entities\Log\FieldConverter.Default.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>FieldConverter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Log\FieldConverter.Enum.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>FieldConverter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Log\FieldConverterAttribute.cs" />
+    <Compile Include="Entities\Log\Log.Action.cs" />
+    <Compile Include="Entities\MapType.cs" />
+    <Compile Include="Entities\PackageService.cs">
+      <DependentUpon>CompanyPackageService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\PackageServiceModule.cs">
+      <DependentUpon>PackageService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Permission.cs">
+      <DependentUpon>UserPermission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Permission.designer.cs">
+      <DependentUpon>Permission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Role.cs" />
+    <Compile Include="Entities\User.Column.cs">
+      <DependentUpon>User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\User.designer.cs">
+      <DependentUpon>User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\User.LoginLog.cs">
+      <DependentUpon>User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\User.Session.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\UserConfig.cs">
+      <DependentUpon>User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\UserPermission.cs">
+      <DependentUpon>User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Notification.cs" />
+    <Compile Include="Entities\Websites\Category.cs" />
+    <Compile Include="Entities\Websites\Config.cs" />
+    <Compile Include="Entities\Websites\Hashtag.cs" />
+    <Compile Include="Entities\Websites\Label.cs" />
+    <Compile Include="Entities\Websites\Meta.cs" />
+    <Compile Include="Entities\Websites\New.Content.cs" />
+    <Compile Include="Entities\Websites\News.cs" />
+    <Compile Include="Entities\Websites\PageUrl.cs" />
+    <Compile Include="Entities\Websites\PartnerBottom.cs" />
+    <Compile Include="Entities\Websites\Seo.cs" />
+    <Compile Include="Enums\ColorSystem.cs" />
+    <Compile Include="Enums\DateViewReport.cs" />
+    <Compile Include="Enums\DayOfWeek.cs" />
+    <Compile Include="Enums\PeriodNotify.cs" />
+    <Compile Include="Enums\Quarter.cs" />
+    <Compile Include="Enums\Salutation.cs" />
+    <Compile Include="Enums\SessionType.cs" />
+    <Compile Include="Enums\Gender.cs" />
+    <Compile Include="MainDb.cs" />
+    <Compile Include="MainDbStore.cs" />
+    <Compile Include="Mappers\CompanyMapper.cs" />
+    <Compile Include="Mappers\DateMapper.cs" />
+    <Compile Include="NotFinishAttribute.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{60ebed1d-8e49-4a7c-8099-e7d1870ac852}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

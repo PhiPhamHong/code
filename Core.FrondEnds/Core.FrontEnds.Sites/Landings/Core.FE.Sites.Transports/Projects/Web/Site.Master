@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Core.FE.Sites.Transports.Projects.Web.Site" %>
+
+<%--<%@ Register Src="~/Projects/Web/Controls/Header.ascx" TagPrefix="uc1" TagName="Header" %>--%>
+<%--<%@ Register Src="~/Projects/Web/Controls/Footer.ascx" TagPrefix="uc1" TagName="Footer" %>--%>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+
+    <title></title>
+    <asp:Literal runat="server" ID="ltrHead"></asp:Literal>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+    <link rel="stylesheet" type="text/css" href="/Projects/Web/Resources/bootstrap/css/bootstrap.min.css" />
+    <link type="text/css" href="/Projects/Web/Resources/css/owl.carousel.css" rel="stylesheet" />
+    <link type="text/css" href="/Projects/Web/Resources/css/owl.theme.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/css/bootstrap-select.min.css" />
+    <style>
+        .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+            width: 100% !important;
+        }
+
+        .bootstrap-select > .dropdown-toggle.bs-placeholder, .bootstrap-select > .dropdown-toggle.bs-placeholder:active, .bootstrap-select > .dropdown-toggle.bs-placeholder:focus, .bootstrap-select > .dropdown-toggle.bs-placeholder:hover {
+            height: 50px !important;
+            color: #999;
+            font-size: 14px !important;
+            line-height: 21px;
+        }
+    </style>
+
+</head>
+<body style="font-family: Montserrat">
+    <div id="fb-root"></div>
+    <div id="wrapper">
+        <%--<uc1:Header runat="server" />--%>
+        <asp:ContentPlaceHolder ID="content" runat="server"></asp:ContentPlaceHolder>
+        <%--<uc1:Footer runat="server" />--%>
+    </div>
+    <asp:Literal runat="server" ID="ltrBottom" Visible="false"></asp:Literal>
+    <div class="hidden" data-query="page"><%= Request.QueryString.ToDic().ToJson() %></div>
+    <div class="hidden" data-language-flag="<%= FeContext.Url.Language.Flag %>" data-language="<%= FeContext.Url.Language.LanguageId %>"></div>
+
+    <script type="text/javascript" src="/Projects/Web/Resources/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/Projects/Web/Resources/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="/Projects/Web/Resources/js/owl.carousel.js"></script>
+    <script type="text/javascript" src="/Projects/Web/Resources/js/custom.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/js/bootstrap-select.min.js"></script>
+
+    <script type="text/javascript" src="/Common/Resources/js/linq.js"></script>
+    <script type="text/javascript" src="/Common/Resources/js/CoreAjax.js"></script>
+    <script type="text/javascript" src="/Common/Resources/js/Core.js"></script>
+
+
+    <script type="text/javascript" src="/Projects/Web/Resources/js/main.js"></script>
+    <script>
+        /* Multiple Item Picker */
+        $('.selectpicker').selectpicker({
+            style: 'btn-default'
+        });
+    </script>
+</body>
+</html>

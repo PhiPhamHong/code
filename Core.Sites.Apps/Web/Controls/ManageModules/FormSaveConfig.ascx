@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="FormSaveConfig.ascx.cs" Inherits="Core.Sites.Apps.Web.Controls.ManageModules.FormSaveConfig" %>
+<asp:PlaceHolder runat="server" ID="plc"></asp:PlaceHolder>

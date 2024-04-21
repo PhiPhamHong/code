@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ModuleLoader.ascx.cs" Inherits="Core.FE.Sites.Api.Common.Modules.ModuleLoader" %>
+<asp:PlaceHolder runat="server" ID="plc"></asp:PlaceHolder>

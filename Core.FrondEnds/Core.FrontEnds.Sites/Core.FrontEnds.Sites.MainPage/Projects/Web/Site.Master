@@ -1,0 +1,104 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Core.FrontEnds.Sites.MainPage.Projects.Web.Site" %>
+
+<%@ Register Src="~/Projects/Web/Controls/Header.ascx" TagPrefix="uc1" TagName="Header" %>
+<%@ Register Src="~/Projects/Web/Controls/Footer.ascx" TagPrefix="uc1" TagName="Footer" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>TEAM Design - Thiết kế website chuẩn SEO</title>
+    <meta charset="utf-8" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://teamdesign.info/" />
+    <meta property="og:site_name" content="TEAM Design" />
+    <meta property="og:locale" content="vi" />
+
+    <meta property="og:image" content="/Projects/Web/Resources/images/oimage.PNG" />
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="TEAM Design - Thiết kế website chuẩn SEO, Thiết kế phần mềm giải pháp ERP, CRM cho doanh nghiệp, using Software, Bootstrap4, modern, flat style, responsive, business, bootstrap 4, html5, css3, jquery, js, gallery, slider, touch, creative, clean" />
+    <meta name="keywords" content="ERP, CRM,Software, Bootstrap4, modern, flat style, responsive, business, bootstrap 4, html5, css3, jquery, js, gallery, slider, touch, creative, clean" />
+    <meta name="author" content="Teamdesign" />
+    <!-- Favicon Icon -->
+    <link rel="icon" type="image/png" href="/Projects/Web/Resources/images/favicon.png" />
+    <%--<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Itim|Lobster|Montserrat:500|Noto+Serif|Nunito|Patrick+Hand|Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i|Roboto+Slab|Saira" rel="stylesheet" />--%>
+
+    <link rel="stylesheet" type="text/css" href="/Projects/Web/Resources/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="/Projects/Web/Resources/css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="/Projects/Web/Resources/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/Projects/Web/Resources/css/nivo-lightbox.css" />
+    <link rel="stylesheet" type="text/css" href="/Projects/Web/Resources/css/default.css" />
+
+
+    <asp:Literal runat="server" ID="ltrHead"></asp:Literal>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <div id="fb-root"></div>
+    <uc1:Header runat="server" />
+    <asp:ContentPlaceHolder ID="content" runat="server"></asp:ContentPlaceHolder>
+    <uc1:Footer runat="server" />
+    <asp:Literal runat="server" ID="ltrBottom" Visible="false"></asp:Literal>
+    <div class="hidden" data-query="page"><%= Request.QueryString.ToDic().ToJson() %></div>
+    <div class="hidden" data-language-flag="<%= FeContext.Url.Language.Flag %>" data-language="<%= FeContext.Url.Language.LanguageId %>"></div>
+
+    <script type="text/javascript" src="/Projects/Web/Resources/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/Projects/Web/Resources/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/Projects/Web/Resources/js/nivo-lightbox.js"></script>
+    <script type="text/javascript" src="/Projects/Web/Resources/js/jquery.isotope.js"></script>
+    <script type="text/javascript" src="/Projects/Web/Resources/js/jqBootstrapValidation.js"></script>
+    <script type="text/javascript" src="/Projects/Web/Resources/js/contact_me.js"></script>
+    <script type="text/javascript" src="/Projects/Web/Resources/js/main.js"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            var submit = $("#fromContact");
+            submit.click(function () {
+                debugger;
+                var data = $('form#contactForm').serialize();
+                $.ajax({
+                    type: 'GET',
+                    url: 'https://script.google.com/macros/s/AKfycbxuz-Qezd-s5jcfTj9m0gxOxm_6bdVKgkp5dtkmLaZD7IyKkxv7/exec',
+                    dataType: 'json',
+                    crossDomain: true,
+                    data: data,
+                    success: function (data) {
+                        if (data == 'false') {
+                            alert('Có lỗi xảy ra, vui lòng thử lại!');
+                        }
+                        else {
+                            alert('Lời nhắn của bạn đã được gửi đi, chúng tôi sẽ liên lạc lại cho bạn nhanh nhất có thể');
+                        }
+                    }
+                });
+                return false;
+            });
+
+
+            var submit2 = $("#fromHide");
+            submit2.click(function () {
+                debugger;
+                var data = $('form#contactFormHide').serialize();
+                $.ajax({
+                    type: 'GET',
+                    url: 'https://script.google.com/macros/s/AKfycbxuz-Qezd-s5jcfTj9m0gxOxm_6bdVKgkp5dtkmLaZD7IyKkxv7/exec',
+                    dataType: 'json',
+                    crossDomain: true,
+                    data: data,
+                    success: function (data) {
+                        if (data == 'false') {
+                            alert('Có lỗi xảy ra, vui lòng thử lại!');
+                        }
+                        else {
+                            alert('Lời nhắn của bạn đã được gửi đi, chúng tôi sẽ liên lạc lại cho bạn nhanh nhất có thể');
+                        }
+                    }
+                });
+                return false;
+            });
+        });
+    </script>
+
+</body>
+</html>

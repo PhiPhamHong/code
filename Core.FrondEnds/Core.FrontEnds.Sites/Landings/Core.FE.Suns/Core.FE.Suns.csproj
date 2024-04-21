@@ -1,0 +1,349 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3B08D07A-1B82-481C-BF93-02CF588E5F3F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Core.FE.Suns</RootNamespace>
+    <AssemblyName>Core.FE.Suns</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44362</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Common\Modules\ModuleLoader.ascx" />
+    <Content Include="Common\Resources\js\1.jquery.min.js" />
+    <Content Include="Common\Resources\js\Core.js" />
+    <Content Include="Common\Resources\js\CoreAjax.js" />
+    <Content Include="Common\Resources\js\jquery.pathchange.js" />
+    <Content Include="Common\Resources\js\linq.js" />
+    <Content Include="Common\Resources\js\Popup.js" />
+    <Content Include="Common\Resources\plugins\jQueryUI\jquery-ui-1.10.3.js" />
+    <Content Include="Common\Resources\plugins\jQueryUI\jquery-ui-1.10.3.min.js" />
+    <Content Include="Common\Resources\plugins\jQueryUI\jquery-ui.css" />
+    <Content Include="Common\Resources\plugins\jQueryUI\jquery-ui.min.js" />
+    <Content Include="Common\Resources\plugins\lightgallery\css\lg-fb-comment-box.css" />
+    <Content Include="Common\Resources\plugins\lightgallery\css\lg-fb-comment-box.min.css" />
+    <Content Include="Common\Resources\plugins\lightgallery\css\lg-transitions.css" />
+    <Content Include="Common\Resources\plugins\lightgallery\css\lg-transitions.min.css" />
+    <Content Include="Common\Resources\plugins\lightgallery\css\lightgallery.css" />
+    <Content Include="Common\Resources\plugins\lightgallery\css\lightgallery.min.css" />
+    <Content Include="Common\Resources\plugins\lightgallery\fonts\lg.svg" />
+    <Content Include="Common\Resources\plugins\lightgallery\img\loading.gif" />
+    <Content Include="Common\Resources\plugins\lightgallery\img\video-play.png" />
+    <Content Include="Common\Resources\plugins\lightgallery\img\vimeo-play.png" />
+    <Content Include="Common\Resources\plugins\lightgallery\img\youtube-play.png" />
+    <Content Include="Common\Resources\plugins\lightgallery\js\lightgallery-all.js" />
+    <Content Include="Common\Resources\plugins\lightgallery\js\lightgallery-all.min.js" />
+    <Content Include="Common\Resources\plugins\lightgallery\js\lightgallery.js" />
+    <Content Include="Common\Resources\plugins\lightgallery\js\lightgallery.min.js" />
+    <Content Include="Common\Resources\plugins\lightgallery\js\picturefill.min.js" />
+    <Content Include="Common\Resources\plugins\mousewheel\jquery.mousewheel.min.js" />
+    <Content Include="Common\Resources\plugins\pnotify\pnotify.custom.min.css" />
+    <Content Include="Common\Resources\plugins\pnotify\pnotify.custom.min.js" />
+    <Content Include="Common\Resources\plugins\Sticky\jquery.sticky.js" />
+    <Content Include="Common\Services\Ajax.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Projects\Web\Controls\Footer.ascx" />
+    <Content Include="Projects\Web\Controls\Header.ascx" />
+    <Content Include="Projects\Web\Main.aspx" />
+    <Content Include="Projects\Web\Modules\About.ascx" />
+    <Content Include="Projects\Web\Modules\Contact.ascx" />
+    <Content Include="Projects\Web\Modules\Plans.ascx" />
+    <Content Include="Projects\Web\Modules\Portfolio.ascx" />
+    <Content Include="Projects\Web\Modules\Services.ascx" />
+    <Content Include="Projects\Web\Modules\Testimonials.ascx" />
+    <Content Include="Projects\Web\Pages\Home.ascx" />
+    <Content Include="Projects\Web\Resources\css\animate.css" />
+    <Content Include="Projects\Web\Resources\css\bootstrap.min.css" />
+    <Content Include="Projects\Web\Resources\css\style.css" />
+    <Content Include="Projects\Web\Resources\fonts\font-awesome\css\font-awesome.css" />
+    <Content Include="Projects\Web\Resources\img\about.jpg" />
+    <Content Include="Projects\Web\Resources\img\fav.png" />
+    <Content Include="Projects\Web\Resources\img\latest-projects\01.jpg" />
+    <Content Include="Projects\Web\Resources\img\latest-projects\02.jpg" />
+    <Content Include="Projects\Web\Resources\img\latest-projects\03.jpg" />
+    <Content Include="Projects\Web\Resources\img\latest-projects\04.jpg" />
+    <Content Include="Projects\Web\Resources\img\latest-projects\05.jpg" />
+    <Content Include="Projects\Web\Resources\img\latest-projects\06.jpg" />
+    <Content Include="Projects\Web\Resources\img\logo.png" />
+    <Content Include="Projects\Web\Resources\img\portfolio\01-large.jpg" />
+    <Content Include="Projects\Web\Resources\img\portfolio\02-large.jpg" />
+    <Content Include="Projects\Web\Resources\img\portfolio\03-large.jpg" />
+    <Content Include="Projects\Web\Resources\img\portfolio\04-large.jpg" />
+    <Content Include="Projects\Web\Resources\img\portfolio\05-large.jpg" />
+    <Content Include="Projects\Web\Resources\img\portfolio\06-large.jpg" />
+    <Content Include="Projects\Web\Resources\img\portfolio\07-large.jpg" />
+    <Content Include="Projects\Web\Resources\img\portfolio\08-large.jpg" />
+    <Content Include="Projects\Web\Resources\img\portfolio\09-large.jpg" />
+    <Content Include="Projects\Web\Resources\img\preloader.gif" />
+    <Content Include="Projects\Web\Resources\img\services\service-1.jpg" />
+    <Content Include="Projects\Web\Resources\img\services\service-2.jpg" />
+    <Content Include="Projects\Web\Resources\img\services\service-3.jpg" />
+    <Content Include="Projects\Web\Resources\img\services\service-4.jpg" />
+    <Content Include="Projects\Web\Resources\img\services\service-5.jpg" />
+    <Content Include="Projects\Web\Resources\img\services\service-6.jpg" />
+    <Content Include="Projects\Web\Resources\img\sider\slider1.jpg" />
+    <Content Include="Projects\Web\Resources\img\sider\slider2.jpg" />
+    <Content Include="Projects\Web\Resources\img\sider\slider3.jpg" />
+    <Content Include="Projects\Web\Resources\img\testimonials\01.jpg" />
+    <Content Include="Projects\Web\Resources\img\testimonials\02.jpg" />
+    <Content Include="Projects\Web\Resources\img\testimonials\03.jpg" />
+    <Content Include="Projects\Web\Resources\img\testimonials\04.jpg" />
+    <Content Include="Projects\Web\Resources\img\testimonials\05.jpg" />
+    <Content Include="Projects\Web\Resources\img\testimonials\06.jpg" />
+    <Content Include="Projects\Web\Resources\js\bootstrap.min.js" />
+    <Content Include="Projects\Web\Resources\js\jquery.js" />
+    <Content Include="Projects\Web\Resources\js\main.js" />
+    <Content Include="Projects\Web\Resources\js\wow.min.js" />
+    <Content Include="Services\Empty.aspx" />
+    <Content Include="Services\FeError.aspx" />
+    <Content Include="Services\FeError404.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\Modules\ModuleLoader.ascx.cs">
+      <DependentUpon>ModuleLoader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Modules\ModuleLoader.ascx.designer.cs">
+      <DependentUpon>ModuleLoader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Services\Ajax.aspx.cs">
+      <DependentUpon>Ajax.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Services\Ajax.aspx.designer.cs">
+      <DependentUpon>Ajax.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Controls\Footer.ascx.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Controls\Footer.ascx.designer.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Controls\Header.ascx.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Controls\Header.ascx.designer.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Modules\About.ascx.cs">
+      <DependentUpon>About.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Modules\About.ascx.designer.cs">
+      <DependentUpon>About.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Modules\Contact.ascx.cs">
+      <DependentUpon>Contact.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Modules\Contact.ascx.designer.cs">
+      <DependentUpon>Contact.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Modules\Plans.ascx.cs">
+      <DependentUpon>Plans.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Modules\Plans.ascx.designer.cs">
+      <DependentUpon>Plans.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Modules\Portfolio.ascx.cs">
+      <DependentUpon>Portfolio.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Modules\Portfolio.ascx.designer.cs">
+      <DependentUpon>Portfolio.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Modules\Services.ascx.cs">
+      <DependentUpon>Services.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Modules\Services.ascx.designer.cs">
+      <DependentUpon>Services.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Modules\Testimonials.ascx.cs">
+      <DependentUpon>Testimonials.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Modules\Testimonials.ascx.designer.cs">
+      <DependentUpon>Testimonials.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Home.ascx.cs">
+      <DependentUpon>Home.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Pages\Home.ascx.designer.cs">
+      <DependentUpon>Home.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\Web\Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\Web\Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Empty.aspx.cs">
+      <DependentUpon>Empty.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services\Empty.aspx.designer.cs">
+      <DependentUpon>Empty.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\FeError.aspx.cs">
+      <DependentUpon>FeError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services\FeError.aspx.designer.cs">
+      <DependentUpon>FeError.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\FeError404.aspx.cs">
+      <DependentUpon>FeError404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services\FeError404.aspx.designer.cs">
+      <DependentUpon>FeError404.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Common\Resources\plugins\lightgallery\fonts\lg.eot" />
+    <Content Include="Common\Resources\plugins\lightgallery\fonts\lg.ttf" />
+    <Content Include="Common\Resources\plugins\lightgallery\fonts\lg.woff" />
+    <Content Include="Projects\Web\Settings\Pages.config" />
+    <Content Include="Projects\Web\Settings\Resources.config" />
+    <Content Include="Projects\Web\Settings\Settings.config" />
+    <Content Include="Projects\Web\Site.Master" />
+    <Content Include="Projects\Web\Resources\fonts\font-awesome\fonts\fontawesome-webfont.eot#iefix-v=4.3.0" />
+    <Content Include="Projects\Web\Resources\fonts\font-awesome\fonts\fontawesome-webfont.svg-v=4.3.0.htm-" />
+    <Content Include="Projects\Web\Resources\fonts\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Projects\Web\Resources\fonts\font-awesome\fonts\fontawesome-webfont.woff2-v=4.3.0" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Core.Business\Core.Business.csproj">
+      <Project>{77ae2787-635c-48ca-ad29-60484850f894}</Project>
+      <Name>Core.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Core\Core.csproj">
+      <Project>{60ebed1d-8e49-4a7c-8099-e7d1870ac852}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core.FrontEnds.Libraries\Core.FrontEnds.Libraries.csproj">
+      <Project>{6f72d3e8-8283-4126-b7e0-617b5f89d271}</Project>
+      <Name>Core.FrontEnds.Libraries</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54986</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44362/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Landing_Software.master.cs" Inherits="Core.FrontEnds.Sites.MainPage.Projects.Landings.Landing_Software.Landing_Software" %>
+
+<%@ Register Src="~/Projects/Landings/Landing_Software/Controls/Header.ascx" TagPrefix="uc1" TagName="Header" %>
+<%@ Register Src="~/Projects/Landings/Landing_Software/Controls/Footer.ascx" TagPrefix="uc1" TagName="Footer" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>TEAM Software - Software landing page</title>
+    <meta charset="utf-8" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://teamdesign.info/trang-chu-landing-software-template" />
+    <meta property="og:site_name" content="TEAM Design" />
+    <meta property="og:locale" content="vi" />
+
+
+    <meta property="og:image" content="/Projects/Landings/Landing_Software/Resources/img/amazing-dashboard-block.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="TEAM Software - Software landing page" />
+    <meta name="keywords" content="Software, Bootstrap4, modern, flat style, responsive, business, bootstrap 4, html5, css3, jquery, js, gallery, slider, touch, creative, clean" />
+    <meta name="author" content="Teamdesign" />
+    <!-- Favicon Icon -->
+    <link rel="icon" type="image/png" href="/Projects/Landings/Landing_Software/Resources/img/fav.png" />
+    <!-- Nhúng css vào đây -->
+    <link type="text/css" href="/Projects/Landings/Landing_Software/Resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link type="text/css" href="/Projects/Landings/Landing_Software/Resources/vendor/font/css/fontawesome-all.css" media="all" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="/Projects/Landings/Landing_Software/Resources/vendor/owlcarousel/assets/owl.carousel.min.css" />
+    <link type="text/css" rel="stylesheet" href="/Projects/Landings/Landing_Software/Resources/vendor/owlcarousel/assets/owl.theme.default.min.css" />
+    <link type="text/css" href="/Projects/Landings/Landing_Software/Resources/css/animate.css" rel="stylesheet" />
+    <link type="text/css" href="/Projects/Landings/Landing_Software/Resources/css/style.css" rel="stylesheet" />
+    
+    <asp:Literal runat="server" ID="ltrHead"></asp:Literal>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body id="page-top">
+    <div id="fb-root"></div>
+    <uc1:Header runat="server" />
+    <asp:ContentPlaceHolder ID="content" runat="server"></asp:ContentPlaceHolder>
+    <uc1:Footer runat="server" />
+    <div class="fixed-action-btn smooth-scroll animated hiddendiv" data-button="back-top">
+        <a class="btn-floating btn-large">
+            <i class="fa fa-arrow-up"></i>
+        </a>
+    </div>
+    <asp:Literal runat="server" ID="ltrBottom" Visible="false"></asp:Literal>
+    <div class="hidden" style="display: none" data-query="page"><%= Request.QueryString.ToDic().ToJson() %></div>
+    <div class="hidden" style="display: none" data-language-flag="<%= FeContext.Url.Language.Flag %>" data-language="<%= FeContext.Url.Language.LanguageId %>"></div>
+
+    <!-- Nhúng js vào đây -->
+
+    <script type="text/javascript" src="/Projects/Landings/Landing_Software/Resources/vendor/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/Projects/Landings/Landing_Software/Resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="/Projects/Landings/Landing_Software/Resources/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="/Projects/Landings/Landing_Software/Resources/vendor/scrolling-nav/scrolling-nav.js"></script>
+    <script type="text/javascript" src="/Projects/Landings/Landing_Software/Resources/vendor/contact/jqBootstrapValidation.js"></script>
+    <script type="text/javascript" src="/Projects/Landings/Landing_Software/Resources/vendor/contact/contact_me.js"></script>
+    <script type="text/javascript" src="/Projects/Landings/Landing_Software/Resources/vendor/particles/particles.js"></script>
+    <script type="text/javascript" src="/Projects/Landings/Landing_Software/Resources/vendor/owlcarousel/owl.carousel.js"></script>
+    <script type="text/javascript" src="/Projects/Landings/Landing_Software/Resources/vendor/animate/animate.js"></script>
+    <script type="text/javascript" src="/Projects/Landings/Landing_Software/Resources/vendor/custom/custom.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6F72D3E8-8283-4126-B7E0-617B5F89D271}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Core.FrontEnds.Libraries</RootNamespace>
+    <AssemblyName>Core.FrontEnds.Libraries</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Fizzler, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Core\Refferences\Spiders\Fizzler.dll</HintPath>
+    </Reference>
+    <Reference Include="Fizzler.Systems.HtmlAgilityPack, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Core\Refferences\Spiders\Fizzler.Systems.HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.3.0.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Core\Refferences\Spiders\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Const.cs" />
+    <Compile Include="Extensions\HttpRequestExtension.cs" />
+    <Compile Include="Extensions\NewExtension.cs" />
+    <Compile Include="FeUrl.cs" />
+    <Compile Include="Images\ImageHandler.cs" />
+    <Compile Include="Images\PathImage.cs" />
+    <Compile Include="Portal\CacheUrl.cs" />
+    <Compile Include="Portal\Configs\ColumnTag.cs" />
+    <Compile Include="Portal\Configs\ModuleTag.cs" />
+    <Compile Include="Portal\Configs\PagesConfig.cs" />
+    <Compile Include="Portal\Configs\PageTag.cs" />
+    <Compile Include="Portal\Configs\UrlEngine.cs" />
+    <Compile Include="Portal\Configs\UrlTag.cs" />
+    <Compile Include="Portal\IUrlEngine.cs" />
+    <Compile Include="Portal\Module.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Portal\ModuleAttribute.cs" />
+    <Compile Include="Portal\PageUrl.cs" />
+    <Compile Include="Portal\PageUrl.FromEngine.cs">
+      <DependentUpon>PageUrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Portal\PageUrl.FromNormalConfig.cs">
+      <DependentUpon>PageUrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Portal\PortalPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Portal\RewritePortal.cs" />
+    <Compile Include="Portal\TargetCacheUrlAttribute.cs" />
+    <Compile Include="Portal\UrlFinder.cs" />
+    <Compile Include="Portal\UrlMapping.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Setting.cs" />
+    <Compile Include="UrlEngines\Landings\UrlLandingEngine.cs" />
+    <Compile Include="UrlEngines\Previews\UrlPreviewEngine.cs" />
+    <Compile Include="UrlEngines\Products\UrlProductDetailEngine.cs" />
+    <Compile Include="UrlEngines\Products\UrlSearchEngine.cs" />
+    <Compile Include="UrlEngines\Url404Engine.cs" />
+    <Compile Include="UrlEngines\UrlByPageUrlEngine.cs" />
+    <Compile Include="UrlEngines\UrlCategoryEngine.cs" />
+    <Compile Include="UrlEngines\UrlNewsEngine.cs" />
+    <Compile Include="Utilities\Cart.cs" />
+    <Compile Include="Utilities\CategoryTree.cs" />
+    <Compile Include="Web\Authenticate\Member.Account.cs">
+      <DependentUpon>Member.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Authenticate\Member.Active.cs">
+      <DependentUpon>Member.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Authenticate\Member.ChangePassword.cs">
+      <DependentUpon>Member.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Authenticate\Member.cs" />
+    <Compile Include="Web\Authenticate\Member.Forgot.cs">
+      <DependentUpon>Member.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Authenticate\Member.GetPassword.cs">
+      <DependentUpon>Member.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Authenticate\Member.Login.cs">
+      <DependentUpon>Member.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Authenticate\Member.Register.cs">
+      <DependentUpon>Member.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Authenticate\Member.Session.cs">
+      <DependentUpon>Member.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Authenticate\MethodLoginRequireAttribute.cs" />
+    <Compile Include="Web\Authenticate\ModuleLoginRequireAttribute.cs" />
+    <Compile Include="Web\Caches\Api\CacheUtmForms.cs" />
+    <Compile Include="Web\Caches\CacheBanners.cs" />
+    <Compile Include="Web\Caches\CacheCategories.cs" />
+    <Compile Include="Web\Caches\CacheGlobalConfig.cs" />
+    <Compile Include="Web\Caches\CacheLabels.cs" />
+    <Compile Include="Web\Caches\CacheLanguages.cs" />
+    <Compile Include="Web\Caches\CacheMeta.cs" />
+    <Compile Include="Web\Caches\CachePageUrls.cs" />
+    <Compile Include="Web\Caches\CachePartners.cs" />
+    <Compile Include="Web\Caches\CacheSeo.cs" />
+    <Compile Include="Web\Caches\CacheTreeCategories.cs" />
+    <Compile Include="Web\Caches\News\CacheNews.cs" />
+    <Compile Include="Web\Caches\Orthers\CacheDocuments.cs" />
+    <Compile Include="Web\Caches\Orthers\CacheProducts.cs" />
+    <Compile Include="Web\Caches\Orthers\PriceConfigs\CacheDirections.cs" />
+    <Compile Include="Web\Caches\Orthers\PriceConfigs\CachePriceConfigs.cs" />
+    <Compile Include="Web\Caches\Orthers\PriceConfigs\CacheProductTypes.cs" />
+    <Compile Include="Web\Caches\Previews\CacheLandingPages.cs" />
+    <Compile Include="Web\Caches\Previews\CacheTemplates.cs" />
+    <Compile Include="Web\Caches\Previews\CacheUptinForms.cs" />
+    <Compile Include="Web\Caches\Products\CacheFacturers.cs" />
+    <Compile Include="Web\Caches\Products\CacheProducts.cs" />
+    <Compile Include="Web\CacheUrl.cs" />
+    <Compile Include="Web\CookieOfCart.cs" />
+    <Compile Include="Web\FeContext.Common.cs">
+      <DependentUpon>FeContext.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web\FeContext.cs" />
+    <Compile Include="Web\FeContext.Label.cs">
+      <DependentUpon>FeContext.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web\FeContext.Url.Category.cs">
+      <DependentUpon>FeContext.Url.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web\FeContext.Url.cs">
+      <DependentUpon>FeContext.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web\FeContext.Url.News.cs">
+      <DependentUpon>FeContext.Url.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web\FeGlobal.cs" />
+    <Compile Include="Web\LanguageProvider.cs" />
+    <Compile Include="Web\MasterPageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Page404.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Pager.cs" />
+    <Compile Include="Web\Pager.Number.cs" />
+    <Compile Include="Web\PageSetting.cs" />
+    <Compile Include="Web\PageSite.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Resource.cs" />
+    <Compile Include="Web\Rewrite.cs" />
+    <Compile Include="Web\WebPagesConfig.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core.Business\Core.Business.csproj">
+      <Project>{77ae2787-635c-48ca-ad29-60484850f894}</Project>
+      <Name>Core.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Core.csproj">
+      <Project>{60ebed1d-8e49-4a7c-8099-e7d1870ac852}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

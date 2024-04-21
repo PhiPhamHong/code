@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Core.FE.Sites.Api.Projects.Web.Site" %>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>SSERP - Phần mềm giải pháp ERP - CRM cho doanh nghiệp</title>
+    <meta charset="utf-8" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sserp.vn/" />
+    <meta property="og:site_name" content="SSERP - Smart ERP Software" />
+    <meta property="og:locale" content="vi" />
+
+    <meta property="og:image" content="/Projects/Web/Resources/img/amazing-dashboard-block.png" />
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="SSERP - Phần mềm giải pháp ERP - CRM cho doanh nghiệp, Thiết kế website chuẩn SEO, Thiết kế phần mềm giải pháp ERP, CRM cho doanh nghiệp, using Software, Bootstrap4, modern, flat style, responsive, business, bootstrap 4, html5, css3, jquery, js, gallery, slider, touch, creative, clean" />
+    <meta name="keywords" content="ERP, CRM, Software, Bootstrap4, modern, flat style, responsive, business, bootstrap 4, html5, css3, jquery, js, gallery, slider, touch, creative, clean" />
+    <meta name="author" content="Aphi" />
+    <!-- Favicon Icon -->
+    <link rel="icon" type="image/png" href="/Projects/Web/Resources/img/fav.png" />
+
+    <asp:Literal runat="server" ID="ltrHead"></asp:Literal>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body id="page-top">
+    <div id="fb-root"></div>
+    <div id="wrapper">
+        
+        <asp:ContentPlaceHolder ID="content" runat="server"></asp:ContentPlaceHolder>
+        
+    </div>
+    <asp:Literal runat="server" ID="ltrBottom" Visible="false"></asp:Literal>
+    <div class="hidden" style="display:none;" data-query="page"><%= Request.QueryString.ToDic().ToJson() %></div>
+    <div class="hidden" style="display:none;" data-language-flag="<%= FeContext.Url.Language.Flag %>" data-language="<%= FeContext.Url.Language.LanguageId %>"></div>
+</body>
+</html>

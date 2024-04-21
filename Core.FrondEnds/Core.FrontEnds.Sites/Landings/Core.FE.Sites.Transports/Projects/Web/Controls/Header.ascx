@@ -2,14 +2,20 @@
 <header>
     <div class="wrapper" style="background: #603813BF; height: 90px">
         <div class="container" style="padding: 1.5em; text-align: center;">
-            <div class="col-md-2">
+            <div class="col-md-2 col-sm-4 col-xs-4">
                 <div class="logo">
                     <a href="<%= Url("Home") %>">
                         <img src="/Projects/Web/Resources/img/logo.png" alt="">
                     </a>
                 </div>
             </div>
-            <div class="col-md-9" style="padding-top: 10px">
+            <div class="col-md-9 col-sm-4 col-xs-4" style="padding-top: 10px">
+                 <nav role="navigation">
+            <div id="menuToggle">
+              <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
                 <div class="menu-md">
                     <asp:Repeater runat="server" ID="rpsmallcate">
                         <ItemTemplate>
@@ -19,9 +25,10 @@
                         </ItemTemplate>
                     </asp:Repeater>
                 </div>
-
+           </div>
+          </nav>
             </div>
-            <div class="col-md-1">
+            <div class="col-md-1 col-sm-4 col-xs-4">
                 <div class="lang" style="display: ruby">
                     <div style="padding: 1px">
                         <a href="<%= url_jp %>" class="item-l">

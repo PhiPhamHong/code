@@ -2,7 +2,7 @@
 <header>
     <div class="wrapper" style="background: #603813BF; height: 90px">
         <div class="container" style="padding: 1.5em; text-align: center;">
-            <div class="col-md-2 col-sm-4 col-xs-4">
+            <div class="col-md-2 col-sm-4 col-xs-4 cnt-logo-tablet">
                 <div class="logo">
                     <a href="<%= Url("Home") %>">
                         <img src="/Projects/Web/Resources/img/logo.png" alt="">

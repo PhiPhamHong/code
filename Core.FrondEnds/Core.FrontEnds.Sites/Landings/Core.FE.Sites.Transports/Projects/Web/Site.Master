@@ -16,8 +16,8 @@
     <asp:Literal runat="server" ID="ltrHead"></asp:Literal>
     <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
     <link rel="stylesheet" type="text/css" href="/Projects/Web/Resources/bootstrap/css/bootstrap.min.css" />
-    <link type="text/css" href="/Projects/Web/Resources/css/owl.carousel.css" rel="stylesheet" />
-    <link type="text/css" href="/Projects/Web/Resources/css/owl.theme.css" rel="stylesheet" />
+    <link type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/css/bootstrap-select.min.css" />
 
     <style>
@@ -45,9 +45,9 @@
     <div class="hidden" data-query="page"><%= Request.QueryString.ToDic().ToJson() %></div>
     <div class="hidden" data-language-flag="<%= FeContext.Url.Language.Flag %>" data-language="<%= FeContext.Url.Language.LanguageId %>"></div>
 
-    <script type="text/javascript" src="/Projects/Web/Resources/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="/Projects/Web/Resources/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="/Projects/Web/Resources/js/owl.carousel.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script type="text/javascript" src="/Projects/Web/Resources/js/custom.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/js/bootstrap-select.min.js"></script>
 

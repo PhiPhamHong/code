@@ -6,8 +6,8 @@
 <uc1:Header runat="server" ID="Header" />
 <div class="banner">
     <div class="img">
-        <section class="text-center">
-            <div class="owl-carousel owl-carousel-featured">
+        <section class="text-center ">
+            <div class="owl-carousel-featured owl-theme owl-carousel">
 
                 <div class="item">
                     <img src="/Projects/Web/Resources/img/banner.png" alt="">

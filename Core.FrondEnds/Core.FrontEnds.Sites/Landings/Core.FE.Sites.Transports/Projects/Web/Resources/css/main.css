@@ -13766,6 +13766,7 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
+    z-index:10;
 }
 
     footer .left-f {
@@ -14169,6 +14170,10 @@ list-new ul {
     }
 #menuToggle input[type=checkbox] {
     display: none;
+}
+.owl-carousel.owl-drag .owl-item .item  a{
+    display:flex;
+    justify-content:center;
 }
 @media (max-width: 1400px) {
     header .wrapper .left .menu-md .item-mn, header .wrapper .right .menu-md .item-mn {
@@ -14688,11 +14693,16 @@ list-new ul {
 }
 @media(max-width:1024px){
     .cnt-logo-tablet.col-md-2.col-sm-4 {
-        position: absolute!important;
-        max-width: 80%;
+        position: absolute !important;
+        max-width: 100%;
+        left: 0;
+        width: 100% !important;
     }
     footer .col-md-2.col-sm-12 {
         max-width: 100%;
+        float: inherit;
+        text-align: center;
+        flex: inherit;
     }
     .css-tablet-lang {
         max-width: 100px !important;
@@ -14799,6 +14809,10 @@ list-new ul {
     
     footer .col-md-2, footer .col-md-7 {
         max-width: 100%;
+    }
+    footer .icon {
+        max-width: 170px;
+        margin: 0 auto;
     }
 }
 @media(max-width:500px) {

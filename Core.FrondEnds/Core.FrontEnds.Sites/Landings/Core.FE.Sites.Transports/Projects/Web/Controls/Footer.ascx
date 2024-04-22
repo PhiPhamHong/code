@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Footer.ascx.cs" Inherits="Core.FE.Sites.Transports.Projects.Web.Controls.Footer" %>
 <footer>
-    <div class="" style="text-align: center;">
-        <div class="col-md-2 col-sm-12" style="padding: 25px;">
+    <div class="row" style="    align-items: center;">
+        <div class="col-md-2 col-sm-12">
             <div>
                 <a href="#" target="_blank" style="color: white; padding: 5px">
                     <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor">
@@ -22,7 +22,7 @@
         </div>
         <div class="col-md-7">
             <section class="carousel-slider-main text-center" style="padding:10px;">
-                <div class="owl-carousel owl-carousel-category">
+                <div class="owl-carousel-category owl-theme owl-carousel">
                     <asp:Repeater runat="server" ID="rpPartner">
                         <ItemTemplate>
                             <div class="item">
@@ -35,7 +35,7 @@
                 </div>
             </section>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2 col-sm-12">
             <div class="icon">
                 <img src="/Projects/Web/Resources/img/truck.png" alt="">
             </div>

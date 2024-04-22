@@ -9,7 +9,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-md-9 col-sm-4 col-xs-4" style="padding-top: 10px">
+            <div class="col-md-9 fix-mb-icon" style="padding-top: 10px">
                  <nav role="navigation">
             <div id="menuToggle">
               <input type="checkbox" />
@@ -28,7 +28,7 @@
            </div>
           </nav>
             </div>
-            <div class="col-md-1 col-sm-4 col-xs-4">
+            <div class="col-md-1 col-sm-4 col-xs-4 css-tablet-lang">
                 <div class="lang" style="display: ruby">
                     <div style="padding: 1px">
                         <a href="<%= url_jp %>" class="item-l">

@@ -14670,6 +14670,11 @@ list-new ul {
     width:100%;
 }
 @media(max-width:820px){
+    .fix-mb-icon {
+        position: absolute !important;
+        right: 40px;
+        width: auto !Important;
+    }
     #menuToggle {
         display: flex;
         flex-direction: column;
@@ -14758,6 +14763,24 @@ list-new ul {
     }
     #menuToggle input[type=checkbox]{
         display:block;
+    }
+    .css-tablet-lang {
+        max-width: 80% !important;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+        .css-tablet-lang .lang {
+            display: flex !important;
+            flex-wrap: wrap;
+            width: 70px;
+            justify-content: center;
+        }
+        .css-tablet-lang .lang>div{
+            width:50%;
+        }
+    footer .col-md-2, footer .col-md-7 {
+        max-width: 100%;
     }
 }
 @media(max-width:500px) {
